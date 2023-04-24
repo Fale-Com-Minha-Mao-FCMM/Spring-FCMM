@@ -21,12 +21,30 @@ return new ModelAndView("homeUsuario");
 * @return a view html
 */
 @GetMapping("/cadastro")
-public ModelAndView formCliente() {
+public ModelAndView formCadastro() {
 return new ModelAndView("cadastroUsuario");
 }
 @GetMapping("/admin")
 public ModelAndView formAdmin() {
     return new ModelAndView("crudAdmin");
 }
+@GetMapping("/login")
+public ModelAndView formLogin() {
+    return new ModelAndView("login");
+}
+@GetMapping("/crud")
+public ModelAndView formCrud() {
+    return new ModelAndView("crudAdmin");
+}
+@GetMapping("/crudAluno")
+public ModelAndView formCrudAluno(){
+    return new ModelAndView("crudAdminAluno");
+}
+@GetMapping("/crudCapitulos")
+public ModelAndView formCrudCapitulos(){
+    return new ModelAndView("crudAdminCapitulos");
+}
+
+
 
 }

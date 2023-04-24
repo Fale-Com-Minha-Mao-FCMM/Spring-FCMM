@@ -20,19 +20,19 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="#" class="active">
+          <a href="/html/crudAdmin.html">
             <i class='bx bx-home-alt' ></i>
             <span class="links_name">Geral</span>
           </a>
         </li>
         <li>
-          <a th:href="@{/crudAluno}">
+          <a href="/html/crudAdminAluno.html">
             <i class='bx bx-group' ></i>
             <span class="links_name">Alunos</span>
           </a>
         </li>
         <li>
-          <a th:href="@{/crudCapitulos}">
+          <a href="/html/crudAdminCapitulos.html" class="active">
             <i class='bx bx-bookmark' ></i>
             <span class="links_name">Capitulos</span>
           </a>
@@ -47,15 +47,15 @@
   </div>
   <section class="home-section">
   <script>
-   let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".sidebarBtn");
-sidebarBtn.onclick = function() {
-  sidebar.classList.toggle("active");
-  if(sidebar.classList.contains("active")){
-  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-}else
-  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-}
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+    if(sidebar.classList.contains("active")){
+      sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+    }else
+      sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
  </script>
 
 </body>

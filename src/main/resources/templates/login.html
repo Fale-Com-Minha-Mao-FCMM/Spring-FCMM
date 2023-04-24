@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" th:href="@{css/index.css} media="screen" />
+            <title>Login</title>
+        </head>
+        <body>
+            <header>
+                <!-- <nav>
+                    <ul>
+                        <li><a href="cadastro.html">Cadastrar</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav> -->
+            </header>
+             <div class="Login-Container">
+                <h1>Bem-vindo de volta!</h1>
+                <form name="formUsuario" method="POST">
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="formEmail">Email* </label><br>
+                                    <input type="email" class="inputEmail" name="inputEmail" placeholder="seuemail@email.com"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="formSenha">Senha* </label><br>
+                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************"><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                    <div>
+                        <div>
+                            <input type="button" value="Entrar" class="inputSubmitEntrar" href="#">
+     
+                </form>
+            </div>
+<br>
+
+       <center><div>    
+        <h4> Não possui conta? </h4>
+        <p>
+        <a href="/html/cadastroUsuario.html" class="btnCadastro">Cadastrar</a>
+        </p>
+    </div>
+
+</body>
+</html>

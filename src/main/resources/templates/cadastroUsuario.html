@@ -5,6 +5,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
+            <script src="../static/validarCadastro.js"></script>
             <title>Cadastro</title>
         </head>
         <body>
@@ -12,7 +13,7 @@
             </header>
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form name="cadastroUsuario" method="POST">
+                <form method="POST" onsubmit="return validar();">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
@@ -71,14 +72,14 @@
                         </div>
                     </div>
                     <div>
-                        <center><div>
-                            <input type="button" value="Cadastrar" class="inputSubmitCadastrar" href="#">
-                        </div></center>
+                        <div>
+                            <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
+                        </div>
                         <br>
-                        <center><h3>OU</h3>
+                        <h3>OU</h3>
                         <p>Já possui conta?</p>
-                        <a href="/html/login.html" class="btnLogin">Fazer login</a>
-                        </center>
+                        <a href="@{/login}" class="btnLogin">Fazer login</a>
+                        
                     </div>         
                 </form>
             </div></center>
