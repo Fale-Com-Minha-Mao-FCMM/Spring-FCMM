@@ -101,4 +101,9 @@ public class Usuario {
 		this.email = email;
 		this.senha = senha;
 	}
+	public Usuario(@NotBlank(message = "Nome é requerido.") String nome2,
+			@Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/-](0?[1-9]|1[012])[\\/-]\\d{4}$", message = "A data de nascimento deve estar no formato dd/MM/YYYY") String dataNascimento2,
+			@NotBlank(message = "O email é obrigatório.") String email2,
+			@NotBlank(message = "A senha é obrigatória.") String senha2) {
+	}
 }

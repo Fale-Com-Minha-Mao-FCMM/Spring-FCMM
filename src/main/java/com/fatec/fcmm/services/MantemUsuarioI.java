@@ -1,16 +1,16 @@
 package com.fatec.fcmm.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.fatec.fcmm.model.Usuario.Usuario;
-import com.fatec.fcmm.model.Repositorys.MantemUsuarioRepository;
-
 import java.util.List;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.fatec.fcmm.model.Usuario.Usuario;
+import com.fatec.fcmm.model.Usuario.Repositorys.MantemUsuarioRepository;
 
 public class MantemUsuarioI implements MantemUsuario {
     Logger logger = LogManager.getLogger(this.getClass());
@@ -49,4 +49,6 @@ public class MantemUsuarioI implements MantemUsuario {
         usuarioModificado.setId(id);
         logger.info(usuarioModificado.getId());
         return Optional.ofNullable(repository.save(usuarioModificado));
+    }
+
 }

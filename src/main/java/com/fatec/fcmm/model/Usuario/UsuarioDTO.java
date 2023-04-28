@@ -57,6 +57,6 @@ public class UsuarioDTO {
     }
 
     public Usuario retornaUmUsuario() {
-        return new Usuario(nome, dataNascimento, email, senha, dataNascimento, dataNascimento);
+        return new Usuario(nome, dataNascimento, email, senha);
     }
 }
