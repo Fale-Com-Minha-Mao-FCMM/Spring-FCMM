@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" th:href="@{css/index.css} media="screen" />
+    <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icones -->
@@ -20,25 +20,25 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="/html/crudAdmin.html">
+          <a th:href="@{/crud}">
             <i class='bx bx-home-alt' ></i>
             <span class="links_name">Geral</span>
           </a>
         </li>
         <li>
-          <a href="/html/crudAdminAluno.html" class="active">
+          <a th:href="#" class="active">
             <i class='bx bx-group' ></i>
             <span class="links_name">Alunos</span>
           </a>
         </li>
         <li>
-          <a href="/html/crudAdminCapitulos.html">
+          <a th:href="@{/crudCapitulos}">
             <i class='bx bx-bookmark' ></i>
             <span class="links_name">Capitulos</span>
           </a>
         </li>
         <li class="log_out">
-          <a href="/html/cadastroUsuario.html">
+          <a th:href="@{/}">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Sair</span>
           </a>
