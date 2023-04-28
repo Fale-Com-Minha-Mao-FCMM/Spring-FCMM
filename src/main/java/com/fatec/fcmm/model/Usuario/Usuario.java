@@ -1,4 +1,4 @@
-package com.fatec.fcmm.model;
+package com.fatec.fcmm.model.Usuario;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
