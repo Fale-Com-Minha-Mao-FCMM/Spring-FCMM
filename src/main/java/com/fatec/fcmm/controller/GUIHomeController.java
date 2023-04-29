@@ -45,6 +45,9 @@ public ModelAndView formCrudCapitulos(){
     return new ModelAndView("crudAdminCapitulos");
 }
 
-
+@GetMapping ("/consultaUsuario")
+public ModelAndView formConsultaUsuario(){
+    return new ModelAndView("consultarUsuario");
+}
 
 }
