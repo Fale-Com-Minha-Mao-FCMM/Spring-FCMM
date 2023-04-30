@@ -14,14 +14,14 @@
             </header>
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form method="POST" onsubmit="return validar();">
+                <form action="#" th:action="@{fcmm/Usuario}" onsubmit="return validar();">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
                             <div class="emails">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com"><br>
+                                    <input type="email" th:field="*{email}" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" requi__red><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>

@@ -8,9 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import com.fatec.fcmm.model.Usuario.MantemUsuarioRepository;
 import com.fatec.fcmm.model.Usuario.Usuario;
-import com.fatec.fcmm.model.Usuario.Repositorys.MantemUsuarioRepository;
 
 public class MantemUsuarioI implements MantemUsuario {
     Logger logger = LogManager.getLogger(this.getClass());

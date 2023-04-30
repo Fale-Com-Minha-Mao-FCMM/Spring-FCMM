@@ -7,16 +7,16 @@ import java.util.Optional;
 
 public interface MantemUsuario {
 
-    public List<Usuario> consultaTodos();
+    List<Usuario> consultaTodos();
 
-    public Optional<Usuario> consultaPorId(Long id);
+    Optional<Usuario> consultaPorId(Long id);
 
-    public void delete(Long id);
+    void delete(Long id);
 
-    public Optional<Usuario> consultaPorNome(String Nome);
+    Optional<Usuario> consultaPorNome(String Nome);
 
-    public Optional<Usuario> save(Usuario usuario);
+    Optional<Usuario> save(Usuario usuario);
 
-    public Optional<Usuario> atualiza(Long id, Usuario usuario);
+    Optional<Usuario> atualiza(Long id, Usuario usuario);
 }
 

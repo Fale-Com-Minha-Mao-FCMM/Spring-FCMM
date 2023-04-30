@@ -13,18 +13,18 @@
             </header>
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form method="POST" onsubmit="return validar();">
+                <form action="#" th:action="@{/criar-cadastro}" th:object="${cadastro}" onsubmit="return validar();" method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
                             <div class="emails">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com"><br>
+                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com"><br>
+                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}"><br>
                                 </div>
                             </div>
                         </div>
@@ -32,11 +32,11 @@
                             <div class="senhas">
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************"><br>
+                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************"><br>
+                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
                                 </div>
                             </div>
                         </div>
@@ -46,11 +46,11 @@
                         <div class="nomeCompleto">
                             <div>
                                 <label for="formName">Nome* </label><br>
-                                <input type="text" class="inputName" name="inputName" placeholder="Edson"><br>
+                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}"><br>
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva"><br>
+                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
                             </div>
                         </div>
                         <div class="extras" >
@@ -60,7 +60,7 @@
                             </div>
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999"><br>
+                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
                             </div>
                         </div>                 
                     </div>

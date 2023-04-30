@@ -1,8 +1,9 @@
-package com.fatec.fcmm.model.Usuario.Repositorys;
+package com.fatec.fcmm.model.Usuario;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.fatec.fcmm.model.Usuario.Usuario;
 
@@ -14,8 +15,8 @@ import com.fatec.fcmm.model.Usuario.Usuario;
  * 
  * @author
  */
+@Repository
 public interface MantemUsuarioRepository extends JpaRepository<Usuario, Long> {
     Optional<Usuario> findByNome(String nome);
-
     List<Usuario> findAllByNomeIgnoreCaseContaining(String nome);
 }

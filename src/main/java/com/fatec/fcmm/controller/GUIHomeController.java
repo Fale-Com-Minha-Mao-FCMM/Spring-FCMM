@@ -5,6 +5,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 //Essa classe será responsável por controlar e retornar as views.
 
+/*Como criar rota?
+ * Para criar a rota é bem simples, pasta tu começar com o @GetMapping e entre parenteses e aspas você vai colocar o nome da rota.
+ * no caso do @GetMapping("/") ele declara que é home (inicio do site).
+ * Depois disso, voce escreve public ModelAndView qualquerCoisa() e abre as chaves {}.
+ * Dentro das chaves você vai colocar 'return new ModelAndView("nomeIdenticoAoDoHTML");'
+ * OBS: Não precisa colocar ".html" no final, apenas o nome.
+*/
+
 @Controller
 public class GUIHomeController {
 /**
@@ -45,9 +53,6 @@ public ModelAndView formCrudCapitulos(){
     return new ModelAndView("crudAdminCapitulos");
 }
 
-@GetMapping ("/consultaUsuario")
-public ModelAndView formConsultaUsuario(){
-    return new ModelAndView("consultarUsuario");
-}
+
 
 }

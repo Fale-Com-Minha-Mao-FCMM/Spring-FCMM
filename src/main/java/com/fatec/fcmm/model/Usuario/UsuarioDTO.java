@@ -3,7 +3,6 @@ package com.fatec.fcmm.model.Usuario;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.br.CPF;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -57,6 +56,6 @@ public class UsuarioDTO {
     }
 
     public Usuario retornaUmUsuario() {
-        return new Usuario(nome, dataNascimento, email, senha);
+        return new Usuario (nome, dataNascimento, email, senha);
     }
 }
