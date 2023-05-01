@@ -7,8 +7,6 @@ import java.text.SimpleDateFormat;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.br.CPF;
-
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -22,106 +20,116 @@ import jakarta.persistence.Id;
 @Entity
 public class Usuario {
 
-    @Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@NotBlank(message = "Nome é requerido")
-	private String nome;
-
-	@Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/-](0?[1-9]|1[012])[\\/-]\\d{4}$", message = "A data de nascimento deve estar no formato dd/MM/YYYY")
-	//https://www.regular-expressions.info/
-	private String dataNascimento;
-	private String dataCadastro;
-
-	@NotBlank(message = "Sexo M/F")
-	private String sexo;
-
-    @NotBlank
+	@NotBlank (message = "Email é requirido")
     private String email;
 
-    @NotBlank
+    @NotBlank (message = "Confirmação do email é requirido")
+    private String confirmarEmail;
+
+    @NotBlank (message = "A senha é requirida")
     private String senha;
-	
-	public Long getId() {
+
+    @NotBlank (message = "Confirmação de senha é requirida")
+    private String confirmarSenha;
+
+    @NotBlank (message = "Nome é requirido")
+    private String nome;
+
+    @NotBlank (message = "Sobrenome é requirido")
+    private String sobrenome;
+
+    @NotBlank (message = "Telefone é requirido")
+    private String telefone;
+
+	//Getters and Setters
+
+	public long getId() {
 		return id;
 	}
-	public void setId(Long id) {
+
+	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(String dataNascimento) {
-        if (validaData(dataNascimento) == true) {
-            this.dataNascimento = dataNascimento;
-        } else {
-            throw new IllegalArgumentException("Data invalida");
-        }
-    }
-	public String getDataCadastro() {
-		return dataCadastro;
-	}
-	public void setDataCadastro(DateTime dataAtual) {
-		this.dataCadastro = obtemDataAtual(dataAtual);
-	}
-	public String getSexo() {
-		return sexo;
-	}
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public String getConfirmarEmail() {
+		return confirmarEmail;
+	}
+
+	public void setConfirmarEmail(String confirmarEmail) {
+		this.confirmarEmail = confirmarEmail;
+	}
+
 	public String getSenha() {
 		return senha;
 	}
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
-	public boolean validaData(String data) {
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        df.setLenient(false); //
-        try {
-            df.parse(data); // data válida (exemplo 30 fev - 31 nov)
-            return true;
-        } catch (ParseException ex) {
-            return false;
-        }
-    }
-
-	public String obtemDataAtual(DateTime dataAtual) {
-		DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/YYYY");
-		return dataAtual.toString(fmt);
+	public String getConfirmarSenha() {
+		return confirmarSenha;
 	}
 
-	public Usuario(@NotBlank(message = "Nome é requerido") String nome,
-			@Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/-](0?[1-9]|1[012])[\\/-]\\d{4}$", message = "A data de nascimento deve estar no formato dd/MM/YYYY") String dataNascimento,
-			String dataCadastro, @NotBlank(message = "Sexo M/F") String sexo, @NotBlank String email,
-			@NotBlank String senha) {
+	public void setConfirmarSenha(String confirmarSenha) {
+		this.confirmarSenha = confirmarSenha;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
 		this.nome = nome;
-		setDataNascimento(dataNascimento);
-		setDataCadastro(new DateTime());
-		this.sexo = sexo;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	// Construtores
+
+	public Usuario() {}
+
+	public Usuario(@NotBlank(message = "Email é requirido") String email,
+			@NotBlank(message = "Confirmação do email é requirido") String confirmarEmail,
+			@NotBlank(message = "A senha é requirida") String senha,
+			@NotBlank(message = "Confirmação de senha é requirida") String confirmarSenha,
+			@NotBlank(message = "Nome é requirido") String nome,
+			@NotBlank(message = "Sobrenome é requirido") String sobrenome,
+			@NotBlank(message = "Telefone é requirido") String telefone) {
 		this.email = email;
+		this.confirmarEmail = confirmarEmail;
 		this.senha = senha;
+		this.confirmarSenha = confirmarSenha;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.telefone = telefone;
 	}
-	public Usuario(@NotBlank(message = "Nome é requerido.") String nome2,
-			@Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/-](0?[1-9]|1[012])[\\/-]\\d{4}$", message = "A data de nascimento deve estar no formato dd/MM/YYYY") String dataNascimento2,
-			@NotBlank(message = "O email é obrigatório.") String email2,
-			@NotBlank(message = "A senha é obrigatória.") String senha2) {
-	}
-	public Usuario() {
-	}
+	
+	
 }

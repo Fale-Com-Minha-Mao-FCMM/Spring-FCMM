@@ -11,20 +11,79 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 public class UsuarioDTO {
-    @NotBlank(message = "Nome é requerido.")
-    private String nome;
-    @Pattern(regexp = "^(0?[1-9]|[12][0-9]|3[01])[\\/-](0?[1-9]|1[012])[\\/-]\\d{4}$", message = "A data de nascimento deve estar no formato dd/MM/YYYY")
-    private String dataNascimento;
-    @NotBlank(message = "O email é obrigatório.")
+    @NotBlank (message = "Email é requirido")
     private String email;
-    @NotBlank(message = "A senha é obrigatória.")
+
+    @NotBlank (message = "Confirmação do email é requirido")
+    private String confirmarEmail;
+
+    @NotBlank (message = "A senha é requirida")
     private String senha;
 
-    public UsuarioDTO(String nome, String dataNascimento, String email, String senha) {
-        this.nome = nome;
-        setDataNascimento(dataNascimento);
+    @NotBlank (message = "Confirmação de senha é requirida")
+    private String confirmarSenha;
+
+    @NotBlank (message = "Nome é requirido")
+    private String nome;
+
+    @NotBlank (message = "Sobrenome é requirido")
+    private String sobrenome;
+
+    @NotBlank (message = "Telefone é requirido")
+    private String telefone;
+
+    //Construtores
+    public UsuarioDTO() {}
+
+
+    public UsuarioDTO(@NotBlank(message = "Email é requirido") String email,
+            @NotBlank(message = "Confirmação do email é requirido") String confirmarEmail,
+            @NotBlank(message = "A senha é requirida") String senha,
+            @NotBlank(message = "Confirmação de senha é requirida") String confirmarSenha,
+            @NotBlank(message = "Nome é requirido") String nome,
+            @NotBlank(message = "Sobrenome é requirido") String sobrenome,
+            @NotBlank(message = "Telefone é requirido") String telefone) {
         this.email = email;
+        this.confirmarEmail = confirmarEmail;
         this.senha = senha;
+        this.confirmarSenha = confirmarSenha;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.telefone = telefone;
+    }
+
+    //Getters e Setters
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getConfirmarEmail() {
+        return confirmarEmail;
+    }
+
+    public void setConfirmarEmail(String confirmarEmail) {
+        this.confirmarEmail = confirmarEmail;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getConfirmarSenha() {
+        return confirmarSenha;
+    }
+
+    public void setConfirmarSenha(String confirmarSenha) {
+        this.confirmarSenha = confirmarSenha;
     }
 
     public String getNome() {
@@ -35,27 +94,27 @@ public class UsuarioDTO {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public String getSenha() {
-        return senha;
+    public Usuario retornaUmUsuario(){
+        return new Usuario(email, confirmarEmail, senha, confirmarSenha, nome, sobrenome, telefone);
     }
 
-    public Usuario retornaUmUsuario() {
-        return new Usuario (nome, dataNascimento, email, senha);
-    }
+   
+
+    
 }

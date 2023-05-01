@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.fatec.fcmm.model.Usuario.MantemUsuarioRepository;
 import com.fatec.fcmm.model.Usuario.Usuario;
 
+@Service
 public class MantemUsuarioI implements MantemUsuario {
     Logger logger = LogManager.getLogger(this.getClass());
     @Autowired
@@ -41,13 +42,13 @@ public class MantemUsuarioI implements MantemUsuario {
         return Optional.ofNullable(repository.save(usuario));
     }
 
-    public Optional<Usuario> atualiza(Long id, Usuario usuario) {
-        logger.info(">>>>>> 1.servico atualiza informações do usuario chamado");
-        Usuario usuarioModificado = new Usuario(usuario.getNome(), usuario.getDataNascimento(), usuario.getEmail(),
-                usuario.getSenha());
-        usuarioModificado.setId(id);
-        logger.info(usuarioModificado.getId());
-        return Optional.ofNullable(repository.save(usuarioModificado));
-    }
+    // public Optional<Usuario> atualiza(Long id, Usuario usuario) {
+    //     logger.info(">>>>>> 1.servico atualiza informações do usuario chamado");
+    //     Usuario usuarioModificado = new Usuario(usuario.getNome(), usuario.getDataNascimento(), usuario.getEmail(),
+    //             usuario.getSenha());
+    //     usuarioModificado.setId(id);
+    //     logger.info(usuarioModificado.getId());
+    //     return Optional.ofNullable(repository.save(usuarioModificado));
+    // }
 
 }
