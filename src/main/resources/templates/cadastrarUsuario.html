@@ -13,19 +13,19 @@
             <header>
             </header>
             <div class="Cadastro-Container">
-                <h1>Bem-vindo!</h1>
-                <form action="#" th:action="@{fcmm/Usuario}" onsubmit="return validar();">
+                <h1>Cadastrar usuario</h1>
+                <form action="#" th:action="@{criar-usuario-admin}" th:object="${usuario}"  onsubmit="return validar();">
                     <div>
-                        <h2>Detalhes da Conta</h2>
+                        <h2>Detalhes da Conta do Usuario</h2>
                         <div>
                             <div class="emails">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" th:field="*{email}" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" requi__red><br>
+                                    <input type="email" th:field="*{email}" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" required><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com"><br>
+                                    <input type="email" th:field="*{confirmarEmail}" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" required><br>
                                 </div>
                             </div>
                         </div>
@@ -33,11 +33,11 @@
                             <div class="senhas">
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************"><br>
+                                    <input type="password" th:field="*{senha}" class="inputSenha" name="inputSenha" placeholder="************"><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************"><br>
+                                    <input type="password"  th:field="*{confirmarSenha}" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************"><br>
                                 </div>
                             </div>
                         </div>
@@ -47,42 +47,26 @@
                         <div class="nomeCompleto">
                             <div>
                                 <label for="formName">Nome* </label><br>
-                                <input type="text" class="inputName" name="inputName" placeholder="Edson"><br>
+                                <input type="text" th:field="*{nome}" class="inputName" name="inputName" placeholder="Edson"><br>
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva"><br>
+                                <input type="text" th:field="*{sobrenome}" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva"><br>
                             </div>
                         </div>
                         <div class="extras" >
                             <div>
-                                <label for="formDataAniversario">Data de aniversário*</label><br>
-                                <input type="date" class="inputDataAniversario" name="inputDataAniversario" placeholder="XX/XX/XXXX"><br>
-                            </div>
-                            <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999"><br>
+                                <input type="tel" th:field="*{telefone}" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999"><br>
                             </div>
                         </div>                 
-                    </div>
-                    <div>
-                        <h2>Termos e Condições</h2>
-                        <div>
-                            <input type="checkbox" class="termosCondicoes" name="termosCondicoes" value="Termos">
-                            <label for="vehicle1">Eu aceito os <a href="#" class="btnTermos">Termos e Condições</a></label><br>
-                        </div>
                     </div>
                     <div>
                         <div>
                             <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
                         </div>
-                        <br>
-                        <h3>OU</h3>
-                        <p>Já possui conta?</p>
-                        <a href="@{/login}" class="btnLogin">Fazer login</a>
-                        
                     </div>         
                 </form>
-            </div></center>
+            </div>
         </body>
     </html>

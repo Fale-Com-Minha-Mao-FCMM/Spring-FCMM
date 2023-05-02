@@ -43,6 +43,7 @@ public ModelAndView formAdmin() {
 public ModelAndView formLogin() {
     return new ModelAndView("login");
 }
+
 @GetMapping("/crud")
 public ModelAndView formCrud() {
     return new ModelAndView("crudAdmin");

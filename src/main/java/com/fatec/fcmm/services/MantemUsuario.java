@@ -17,6 +17,6 @@ public interface MantemUsuario {
 
     Optional<Usuario> save(Usuario usuario);
 
-    // Optional<Usuario> atualiza(Long id, Usuario usuario);
+    Optional<Usuario> atualiza(Long id, Usuario usuario);
 }
 

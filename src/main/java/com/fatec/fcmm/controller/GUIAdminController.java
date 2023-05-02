@@ -24,27 +24,76 @@ public class GUIAdminController {
     @Autowired
     MantemUsuario service;
 
-    //Requisição GET que vai mostrar a págida de criação de aluno.
+    @GetMapping("/")
+    public ModelAndView menu() {
+        return new ModelAndView("homeUsuario");
+    }
+
+    @GetMapping("/crud")
+    public ModelAndView formCrud() {
+        return new ModelAndView("crudAdmin");
+    }
+
+    @GetMapping("/crudAluno")
+    public ModelAndView formCrudAluno() {
+        return new ModelAndView("crudAdminAluno");
+    }
+
+    @GetMapping("/crudCapitulos")
+    public ModelAndView formCrudCapitulos() {
+        return new ModelAndView("crudAdminCapitulos");
+    }
+
+    // Requisição GET que vai mostrar a págida de criação de aluno.
     @GetMapping("/criar-usuario-admin")
-    public ModelAndView verUsuariosAdmin(Usuario usuario){
-        ModelAndView mv = new ModelAndView("");
+    public ModelAndView getUsuariosAdmin(Usuario usuario) {
+        ModelAndView mv = new ModelAndView("cadastrarUsuario");
         mv.addObject("usuario", usuario);
 
         return mv;
     }
 
-    //Requisição POST que irá criar o usuário!
+    // Requisição POST que irá criar o usuário!
     @PostMapping("/criar-usuario-admin")
-    public RedirectView criarUsuarioAdmin(@Valid Usuario usuario, BindingResult result){
-        if (result.hasErrors()){
+    public RedirectView postUsuarioAdmin(@Valid Usuario usuario, BindingResult result) {
+        if (result.hasErrors()) {
             return new RedirectView("/criar-usuario-admin");
         }
 
-        if(!service.save(usuario).isPresent()){
+        if (!service.save(usuario).isPresent()) {
             ModelAndView mv = new ModelAndView("");
             mv.addObject("message", "Dados inválidos");
         }
 
         return new RedirectView("/crudAlunos");
+    }
+
+    // Requisição GET que irá mostrar a página de atualização de cliente
+    @GetMapping("/atualizar-usuario-admin/{id}")
+    public ModelAndView getUsuarioAdmin(@PathVariable("id") long id) {
+        ModelAndView mv = new ModelAndView("");
+        mv.addObject("cliente", service.consultaPorId(id).get());
+
+        return mv;
+    }
+
+    // Requisição POST que irá atualizar um cliente
+    @PostMapping("/atualizar-usuario-admin/{id}")
+    public RedirectView setUsuarioAdmin(@PathVariable("id") long id, @Valid Usuario usuario, BindingResult result) {
+        if (result.hasErrors()) {
+            usuario.setId(id);
+
+            return new RedirectView("/atualizar-usuario-admin/{id}");
+        }
+        service.atualiza(id, usuario);
+
+        return new RedirectView("/crudAluno");
+    }
+
+    // Requisição GET que irá mostrar a página de excluir cliente
+    @GetMapping("/deletar-usuario-admin/{id}")
+    public RedirectView deletarUsuario(@PathVariable("id") Long id) {
+        service.delete(id);
+        return new RedirectView("/crudAluno");
     }
 }

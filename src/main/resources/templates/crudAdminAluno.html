@@ -61,7 +61,7 @@ sidebarBtn.onclick = function() {
   <center><div class="crudContainer">
       <div class="header">
         <span>Alunos</span>
-        <button onclick="openModal()" id="new">Adicionar Aluno</i></button>
+        <button  id="new"><a th:href="*{criar-usuario-admin}">Adicionar Aluno</a></i></button>
       </div>
 
       <div class="divTable">
@@ -70,13 +70,23 @@ sidebarBtn.onclick = function() {
             <tr>
               <th>ID do aluno</th>
               <th>Nome</th>
+              <th>Sobrenome</th>
               <th>E-mail</th>
-              <th>Celular</th>
-              <th class="acao">Editar</th>
-              <th class="acao">Excluir</th>
+              <th>Senha</th>
+              <th>Telefone</th>
+              <!-- <th th:href="*{/}">Editar</th>
+              <th th:href="*{/}">Excluir</th> -->
             </tr>
           </thead>
           <tbody>
+            <tr th:each="Usuario : ${usuario}">
+              <td th:text="${Usuario.id}"></td>
+              <td th:text="${Usuario.nome}"></td>
+              <td th:text="${Usuario.sobrenome}"></td>
+              <td th:text="${Usuario.email}"></td>
+              <td th:text="${Usuario.senha}"></td>
+              <td th:text="${Usuario.telefone}"></td>
+            </tr>
           </tbody>
         </table>
       </div>
