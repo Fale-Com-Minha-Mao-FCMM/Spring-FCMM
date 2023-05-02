@@ -1,7 +1,11 @@
 package com.fatec.fcmm.controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.fatec.fcmm.model.Cadastro;
+import com.fatec.fcmm.services.MantemCadastro;
 
 //Essa classe será responsável por controlar e retornar as views.
 
@@ -15,23 +19,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class GUIHomeController {
-/**
-* processa a requisicao localhost:8080/
-* @return a view html
-*/
+
+@Autowired
+MantemCadastro service;
 
 @GetMapping("/")
 public ModelAndView menu() {
 return new ModelAndView("homeUsuario");
 }
-/**
-* processa a requisicao localhost:8080/clientes
-* @return a view html
-*/
-@GetMapping("/cadastro")
-public ModelAndView formCadastro() {
-return new ModelAndView("cadastroUsuario");
-}
+
+
+// @GetMapping("/criar-usuario")
+// public ModelAndView showIndex(Cadastro cadastro) {
+//     ModelAndView mv = new ModelAndView("cadastroUsuario");
+//     mv.addObject("cadastroUsuario", cadastro);
+//     return mv;
+// }
 @GetMapping("/admin")
 public ModelAndView formAdmin() {
     return new ModelAndView("crudAdmin");
@@ -52,6 +55,8 @@ public ModelAndView formCrudAluno(){
 public ModelAndView formCrudCapitulos(){
     return new ModelAndView("crudAdminCapitulos");
 }
+
+// @GetMapping
 
 
 

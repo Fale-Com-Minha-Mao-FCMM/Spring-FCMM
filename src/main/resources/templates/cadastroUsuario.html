@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+    <html xmlns:th="http://www.thymeleaf.org">
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
             </header>
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form action="#" th:action="@{/criar-cadastro}" th:object="${cadastro}" onsubmit="return validar();" method="POST">
+                <form action="#" th:action="@{/criar-usuario}" th:object="${usuario}" onsubmit="return validar();" method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
@@ -54,10 +54,6 @@
                             </div>
                         </div>
                         <div class="extras" >
-                            <div>
-                                <label for="formDataAniversario">Data de aniversário*</label><br>
-                                <input type="date" class="inputDataAniversario" name="inputDataAniversario" placeholder="XX/XX/XXXX"><br>
-                            </div>
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
                                 <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
