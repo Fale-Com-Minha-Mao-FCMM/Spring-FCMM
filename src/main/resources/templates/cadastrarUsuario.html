@@ -1,6 +1,5 @@
 <!DOCTYPE html>
     <html xmlns:th="http://www.thymeleaf.org">
-        <!--Mesma página do cadastro usuário mas para os administradores-->
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,65 +12,75 @@
             <header>
             </header>
             <div class="felipelindo">
-                <div class="Cadastro-Container">
-                    <h1>Cadastrar usuario</h1>
-                    <form action="#" th:action="@{criar-usuario-admin}" th:object="${usuario}"  onsubmit="return validar();">
+            <div class="Cadastro-Container">
+                <h1>Cadatrar Usuario</h1>
+                <form action="#" th:action="@{/criar-usuario-admin}" th:object="${usuario}" onsubmit="return validar();" method="POST">
+                    <div>
+                        <h2>Detalhes da Conta</h2>
                         <div>
-                            <h2>Detalhes da Conta do Usuario</h2>
-                            <div>
-                                <div class="emails">
-                                    <div>
-                                        <label for="formEmail">Email* </label><br>
-                                        <input type="email" th:field="*{email}" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" required><br>
-                                    </div>
-                                    <div>
-                                        <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                        <input type="email" th:field="*{confirmarEmail}" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" required><br>
-                                    </div>
+                            <div class="emails">
+                                <div>
+                                    <label for="formEmail">Email* </label><br>
+                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="senhas">
-                                    <div>
-                                        <label for="formSenha">Senha* </label><br>
-                                        <input type="password" th:field="*{senha}" class="inputSenha" name="inputSenha" placeholder="************"><br>
-                                    </div>
-                                    <div>
-                                        <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                        <input type="password"  th:field="*{confirmarSenha}" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************"><br>
-                                    </div>
+                                <div>
+                                    <label for="formConfirmaEmail">Confirmar email* </label><br>
+                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}"><br>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h2>Informações pessoais</h2>
-                            <div class="nomeCompleto">
+                            <div class="senhas">
                                 <div>
-                                    <label for="formName">Nome* </label><br>
-                                    <input type="text" th:field="*{nome}" class="inputName" name="inputName" placeholder="Edson"><br>
+                                    <label for="formSenha">Senha* </label><br>
+                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
                                 </div>
                                 <div>
-                                    <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                    <input type="text" th:field="*{sobrenome}" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva"><br>
+                                    <label for="formConfirmaSenha">Confirmar Senha* </label><br>
+                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
                                 </div>
                             </div>
-                            <div class="extras" >
-                                <div>
-                                    <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                    <input type="number" th:field="*{telefone}" minlength="11" maxlength="11" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="(11) 99999-9999"><br>
-                                </div>
-                            </div>                 
                         </div>
-                        <div>
+                    </div>
+                    <div>
+                        <h2>Informações pessoais</h2>
+                        <div class="nomeCompleto">
                             <div>
-                                <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
+                                <label for="formName">Nome* </label><br>
+                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}"><br>
                             </div>
-                            <h3>OU</h3>
-                            <p>Já possui conta?</p>
-                            <a th:href="@{/login}" class="btnLogin">Fazer login</a>
-                        </div>         
-                    </form>
-                </div>
+                            <div>
+                                <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
+                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
+                            </div>
+                        </div>
+                        <div class="extras" >
+                            <div>
+                                <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
+                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
+                            </div>
+                        </div>                 
+                    </div>
+                    <div>
+                        <h2>Termos e Condições</h2>
+                        <div>
+                            <input type="checkbox" class="termosCondicoes" name="termosCondicoes" value="Termos">
+                            <label for="vehicle1">Eu aceito os <a href="#" class="btnTermos">Termos e Condições</a></label><br>
+                        </div>
+                    </div>
+                    <div>
+                        <center><div>
+                            <a></a>
+                            <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
+                        </div>
+                        <br>
+                        <h3>OU</h3>
+                        <p>Já possui conta?</p>
+                        <a href="@{/login}" class="btnLogin">Fazer login</a>
+                        
+                    </div></center>        
+                </form>
+            </div></center>
             </div>
         </body>
     </html>

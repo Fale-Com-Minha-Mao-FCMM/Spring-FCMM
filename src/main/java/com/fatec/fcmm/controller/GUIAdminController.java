@@ -84,7 +84,7 @@ public class GUIAdminController {
             mv.addObject("message", "Dados inválidos");
         }
 
-        return new RedirectView("/crudAlunos");
+        return new RedirectView("/crudAluno");
     }
 
     // Requisição GET que irá mostrar a página de atualização de cliente
