@@ -66,14 +66,14 @@ sidebarBtn.onclick = function() {
   <div class="crudContainer">
       <div class="header">
         <span>Alunos</span>
-        <a th:href="@{/criar-usuario-admin}">Adicionar Aluno</a>
+        <a th:href="@{/criar-usuario-admin}">Adicionar Usuário</a>
       </div>
 
       <div class="divTable">
         <table>
           <thead>
             <tr>
-              <th>ID do aluno</th>
+              <th>ID do usuário</th>
               <th>Nome</th>
               <th>Sobrenome</th>
               <th>E-mail</th>
@@ -99,7 +99,7 @@ sidebarBtn.onclick = function() {
       <div class="modal-container">
         <div class="modal">
           <form>
-            <label for="m-id">ID do aluno</label>
+            <label for="m-id">ID do usuário</label>
             <input id="m-id" type="number" required />
 
             <label for="m-nome">Nome</label>
@@ -117,6 +117,6 @@ sidebarBtn.onclick = function() {
       </div>
 
     </div>
-  <script th:src="/assets/scripts/script.js"></script>
+  <script th:src="@{/js/adicionarAluno}"></script>
 </body>
 </html>

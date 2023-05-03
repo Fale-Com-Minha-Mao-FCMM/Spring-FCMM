@@ -57,7 +57,7 @@
                         <div class="extras" >
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" th:field="*{telefone}" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999"><br>
+                                <input type="number" th:field="*{telefone}" minlength="11" maxlength="11" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="(11) 99999-9999"><br>
                             </div>
                         </div>                 
                     </div>
