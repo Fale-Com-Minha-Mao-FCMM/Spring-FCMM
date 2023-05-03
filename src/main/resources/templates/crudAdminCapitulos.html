@@ -15,8 +15,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxs-hand'></i>
-      <span class="logo_name">FCMM</span>
+      <img src="@{/img/Dashboard/crud/Geral}" id="logoNav">
     </div>
       <ul class="nav-links">
         <li>
@@ -26,9 +25,15 @@
           </a>
         </li>
         <li>
+          <a href="/web/html/crudAdmin.html">
+            <i class='bx bxs-institution'></i>
+            <span class="links_name">Administradores</span>
+          </a>
+        </li>
+        <li>
           <a th:href="@{/crudAluno}">
             <i class='bx bx-group' ></i>
-            <span class="links_name">Alunos</span>
+            <span class="links_name">Usuários</span>
           </a>
         </li>
         <li>

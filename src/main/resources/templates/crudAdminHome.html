@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/web/css/index.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icones -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+     
+   </head>
+
+   <body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="@{/img/Dashboard/crud/Geral}" id="logoNav">
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/web/html/crudAdminHome.html" class="active">
+              <i class='bx bx-home-alt' ></i>
+              <span class="links_name">Geral</span>
+            </a>
+          </li>
+          <li>
+            <a href="/web/html/crudAdmin.html">
+              <i class='bx bxs-institution'></i>
+              <span class="links_name">Administradores</span>
+            </a>
+          </li>
+          <li>
+            <a href="/web/html/crudAdminAluno.html">
+              <i class='bx bx-group' ></i>
+              <span class="links_name">Alunos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/web/html/crudAdminCapitulos.html">
+              <i class='bx bx-bookmark' ></i>
+              <span class="links_name">Capitulos</span>
+            </a>
+          </li>
+          <li class="log_out">
+            <a href="/web/html/index.html">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Sair</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <section class="home-section">
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+          sidebarBtn.onclick = function() {
+          sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+          sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+          sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+     </script>
+     <div>
+      <img src="/web/img/Dashboard/crud/Geral.png" id="imgGeral">
+     </div>
+   </body>

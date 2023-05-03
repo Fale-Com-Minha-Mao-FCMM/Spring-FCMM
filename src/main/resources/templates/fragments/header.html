@@ -15,15 +15,59 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="menuSuperior">
-        <div class="container-fluid">
-            <h3>Sistema Integrado de Gestão</h3>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link textos-nav" href="/login?logout"><i
-                                class="fas fa-sign-out-alt icons-navbar"></i>Sair</a></li>
-                    <li class="nav-item ab"><a class="nav-link textos-nav" href="/"><i class="fas fa-fast-backward"></i>
-                            Voltar </a></li>
+    <header>
+        <div class="acessibilidade">
+          <div class="btn-container">
+            <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+            <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+            <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+            <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+            <label class="label-1">Contraste:</label>
+    
+            <!-- Site Normal -->
+            <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+    
+            <!-- Site Auto Contraste -->
+            <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+    
+            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    
+          </div>
+        </div>
+    
+        <!-- navbar -->
+        <nav>
+          <a id="logo" href="index.html">Fale com Minha Mão</a>
+        <nav id="nav-header">
+          <a id="logo" href="index.html">
+            <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+          </a>
+    
+          <ul class="nav-list">
+            <li><a href="faleconosco.html">Fale conosco</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cadastroUsuario.html">Cadastro</a></li>
+            <li><a href="cadastroUsuario.html"></a></li>
+          </ul>
+        </nav>
+        <!-- responsividade da navbar -->
+        <script src="../js/mobile-navbar.js"></script>
+        <script src="../js/font-size.js"></script>
+
+        <!-- Adicionando o VLibras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+      </header>
                 </ul>
             </div>
         </div>
