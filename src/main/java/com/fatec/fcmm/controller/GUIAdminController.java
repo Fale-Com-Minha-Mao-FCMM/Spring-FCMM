@@ -19,15 +19,18 @@ import ch.qos.logback.core.model.Model;
 
 import org.springframework.web.servlet.view.RedirectView;
 
+
+@Controller
+@RequestMapping
 public class GUIAdminController {
     Logger looger = LogManager.getLogger(GUIAdminController.class);
     @Autowired
     MantemUsuario service;
 
-    @GetMapping("/")
-    public ModelAndView menu() {
-        return new ModelAndView("homeUsuario");
-    }
+    // @GetMapping("/")
+    // public ModelAndView menu() {
+    //     return new ModelAndView("homeUsuario");
+    // }
 
     @GetMapping("/crud")
     public ModelAndView formCrud() {
@@ -55,13 +58,13 @@ public class GUIAdminController {
 
     // Requisição POST que irá criar o usuário!
     @PostMapping("/criar-usuario-admin")
-    public RedirectView postUsuarioAdmin(@Valid Usuario usuario, BindingResult result) {
+    public RedirectView createUsuario(@Valid Usuario usuario, BindingResult result) {
         if (result.hasErrors()) {
-            return new RedirectView("/criar-usuario-admin");
+            return new RedirectView("/crudAluno");
         }
 
         if (!service.save(usuario).isPresent()) {
-            ModelAndView mv = new ModelAndView("");
+            ModelAndView mv = new ModelAndView("cadastrarUsuario");
             mv.addObject("message", "Dados inválidos");
         }
 

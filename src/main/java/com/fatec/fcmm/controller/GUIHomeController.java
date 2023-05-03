@@ -2,6 +2,7 @@ package com.fatec.fcmm.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fatec.fcmm.model.Cadastro;
@@ -18,6 +19,7 @@ import com.fatec.fcmm.services.MantemCadastro;
 */
 
 @Controller
+@RequestMapping
 public class GUIHomeController {
 
 @Autowired
@@ -35,27 +37,29 @@ return new ModelAndView("homeUsuario");
 //     mv.addObject("cadastroUsuario", cadastro);
 //     return mv;
 // }
-@GetMapping("/admin")
-public ModelAndView formAdmin() {
-    return new ModelAndView("crudAdmin");
-}
+// @GetMapping("/admin")
+// public ModelAndView formAdmin() {
+//     return new ModelAndView("crudAdmin");
+// }
+
 @GetMapping("/login")
 public ModelAndView formLogin() {
     return new ModelAndView("login");
 }
 
-@GetMapping("/crud")
-public ModelAndView formCrud() {
-    return new ModelAndView("crudAdmin");
-}
-@GetMapping("/crudAluno")
-public ModelAndView formCrudAluno(){
-    return new ModelAndView("crudAdminAluno");
-}
-@GetMapping("/crudCapitulos")
-public ModelAndView formCrudCapitulos(){
-    return new ModelAndView("crudAdminCapitulos");
-}
+// @GetMapping("/crud")
+// public ModelAndView formCrud() {
+//     return new ModelAndView("crudAdmin");
+// }
+
+// @GetMapping("/crudAluno")
+// public ModelAndView formCrudAluno(){
+//     return new ModelAndView("crudAdminAluno");
+// }
+// @GetMapping("/crudCapitulos")
+// public ModelAndView formCrudCapitulos(){
+//     return new ModelAndView("crudAdminCapitulos");
+// }
 
 // @GetMapping
 

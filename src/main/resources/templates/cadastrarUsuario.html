@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+    <html xmlns:th="http://www.thymeleaf.org">
         <!--Mesma página do cadastro usuário mas para os administradores-->
         <head>
             <meta charset="UTF-8">
@@ -65,6 +65,9 @@
                         <div>
                             <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
                         </div>
+                        <h3>OU</h3>
+                        <p>Já possui conta?</p>
+                        <a href="@{/login}" class="btnLogin">Fazer login</a>
                     </div>         
                 </form>
             </div>
