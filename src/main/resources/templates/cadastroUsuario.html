@@ -11,6 +11,7 @@
         <body>
             <header>
             </header>
+            <div class="felipelindo">
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
                 <form action="#" th:action="@{/criar-usuario}" th:object="${usuario}" onsubmit="return validar();" method="POST">
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <center><div>
                             <a></a>
                             <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
                         </div>
@@ -77,8 +78,9 @@
                         <p>Já possui conta?</p>
                         <a href="@{/login}" class="btnLogin">Fazer login</a>
                         
-                    </div>         
+                    </div></center>        
                 </form>
             </div></center>
+            </div>
         </body>
     </html>

@@ -24,7 +24,7 @@
             <span class="links_name">Geral</span>
           </a>
         </li>
-        <li>
+        <li> 
           <a th:href="@{/crudAdministradores}">
             <i class='bx bxs-institution'></i>
             <span class="links_name">Administradores</span>
@@ -62,6 +62,33 @@
       sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
  </script>
+    <div id="capitulos">
+      <div class="capitulos-details">
+      <img th:src="@{/img/backgrounds/bg3.jpg}">
+      <div class="capitulos-title">
+      <p> Capítulo 1 </p>
+      <a class="btn_capitulo" href="#">Revisar</a>
+    </div>
+    </div>
+    <div class="capitulos-details">
+      <img th:src="@{/img/backgrounds/bg2.jpg}">
+      <div class="capitulos-title">
+      <p> Capítulo 2 </p>
+      <a class="btn_capitulo" href="#">Revisar</a>  <!--Falta configurar o HREF do botão para visualizar o capítulo-->
+    </div>
+    </div>
+    <div class="capitulos-details">
+      <img th:src="@{/img/backgrounds/bg1.jpg}">
+      <div class="capitulos-title">
+      <p> Capítulo 3 </p>
+      <a class="btn_capitulo" href="#">Revisar</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="btn_adicionar_capitulo">
+    <a href="#">Adicionar Capitulo</a>
+  </div>
 
 </body>
 </html>
