@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fatec.fcmm.model.Usuario.MantemUsuarioRepository;
-import com.fatec.fcmm.model.Usuario.Usuario;
+import com.fatec.fcmm.model.Usuario.Usuario; 
 
 @Service
 public class MantemUsuarioI implements MantemUsuario {
