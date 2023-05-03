@@ -32,15 +32,21 @@ public class GUIAdminController {
     //     return new ModelAndView("homeUsuario");
     // }
 
-    @GetMapping("/crud")
-    public ModelAndView formCrud() {
-        return new ModelAndView("crudAdmin");
-    }
-
+    // @GetMapping("/crud")
+    // public ModelAndView formCrud() {
+    //     return new ModelAndView("crudAdmin");
+    // }
     @GetMapping("/crudAluno")
-    public ModelAndView formCrudAluno() {
-        return new ModelAndView("crudAdminAluno");
-    }
+    public ModelAndView showUser(){
+     ModelAndView modelAndView = new ModelAndView("crudAdminAluno");
+         modelAndView.addObject("usuarios", service.consultaTodos());
+
+         return modelAndView;
+     }
+    // @GetMapping("/crudAluno")
+    // public ModelAndView formCrudAluno() {
+    //     return new ModelAndView("crudAdminAluno");
+    // }
 
     @GetMapping("/crudCapitulos")
     public ModelAndView formCrudCapitulos() {
