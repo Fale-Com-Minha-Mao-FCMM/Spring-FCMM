@@ -15,7 +15,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="@{/img/Dashboard/crud/Geral}" id="logoNav">
+      <img th:src="@{/img/logo/logo.png}" id="logoNav">
     </div>
       <ul class="nav-links">
         <li>
@@ -25,7 +25,7 @@
           </a>
         </li>
         <li>
-          <a href="/web/html/crudAdmin.html">
+          <a th:href="@{/crudAdministradores}">
             <i class='bx bxs-institution'></i>
             <span class="links_name">Administradores</span>
           </a>

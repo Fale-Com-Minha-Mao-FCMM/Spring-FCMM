@@ -27,7 +27,7 @@ MantemCadastro service;
 
 @GetMapping("/")
 public ModelAndView menu() {
-return new ModelAndView("homeUsuario");
+return new ModelAndView("index");
 }
 
 
