@@ -64,9 +64,9 @@ sidebarBtn.onclick = function() {
 </script>
 
   <div class="crudContainer">
-      <div class="header">
-        <span>Alunos</span>
-        <a th:href="@{/criar-usuario-admin}">Adicionar Usuário</a>
+      <div class="headerCrud">
+        <span>Usuários</span>
+        <a id="new" th:href="@{/criar-usuario-admin}">Adicionar Usuário</a>
       </div>
 
       <div class="divTable">
@@ -79,8 +79,8 @@ sidebarBtn.onclick = function() {
               <th>E-mail</th>
               <th>Senha</th>
               <th>Telefone</th>
-              <th th:href="@{/atualizar-usuario-admin/{id}}">Editar</th>
-              <th th:href="@{/deletar-usuario-admin/{id}}">Excluir</th>
+              <th class="acao" th:href="@{/atualizar-usuario-admin/{id}}">Editar</th>
+              <th class="acao" th:href="@{/deletar-usuario-admin/{id}}">Excluir</th>
             </tr>
           </thead>
           <tbody>

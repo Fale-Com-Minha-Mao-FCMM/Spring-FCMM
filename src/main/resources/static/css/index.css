@@ -1111,8 +1111,8 @@ input[type="range"] {
 }
 /* Crud Home*/
 #imgCrudGeral{
-  width: 700px;
-  height: 630px;
+  width: 53rem;
+  height: 43rem;
   padding-top: 10%;
 }
 
@@ -1161,6 +1161,7 @@ button {
   border: none;
   color: white;
   background-color: #003087;
+  text-decoration: none;
 }
 
 .divTable {
@@ -1721,6 +1722,7 @@ button {
   border: none;
   color: white;
   background-color: #003087;
+  text-decoration: none;
 }
 
 .divTable2{
@@ -2016,4 +2018,70 @@ nav .sidebar-button i{
   height: 100%;
   padding: 5rem 0 5rem 0;
   
+}
+
+/* Crud Capítulos */
+
+#capitulos{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.capitulos-details{
+  border-radius: 20px;
+  background-color: var(--branco);
+  padding-bottom: 1.5rem;
+  width: 18rem;
+  box-shadow: 0px 0px 32px 0px rgb(0 0 0 / 25%);
+}
+.capitulos-details img{
+  border-radius: 20px;
+  width: 100%;
+}
+.capitulos-details .capitulos-title{
+  text-align: center;
+  font-weight: bold;
+}
+.capitulos-title p{
+  margin: 0.8rem 0;
+}
+
+.capitulos-title p:nth-child(1){
+  font-size: 1.1rem;
+  min-height: 3rem;
+}
+
+.capitulos-title p:nth-child(2){
+  padding-bottom: 0.8rem;
+}
+.capitulos-title .btn_capitulo{
+  text-decoration: none;
+  background-color: #003087;
+  padding: 0.7rem 3rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn_adicionar_capitulo{
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn_adicionar_capitulo a{
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  background-color:#003087;
+  justify-content: center;
+  margin-top: 14%;
+  width: 180px;
+  margin-left: 43%;
+  border-radius: 10px;
+  padding: 0.4rem 6rem;
+
 }

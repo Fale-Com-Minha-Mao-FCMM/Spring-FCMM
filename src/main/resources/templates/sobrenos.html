@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/web/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/contraste.js"></script>
+    <title>Sobre nós</title>
+</head>
+
+<body>
+
+    <!-- Acessibilidade -->
+    <header>
+        <div class="acessibilidade">
+            <div class="btn-container">
+              <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
+              <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
+              <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
+              <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+              <label class="label-1">Contraste:</label>
+      
+              <!-- Site Normal -->
+              <button id="semcontraste" class="semcontraste" href="javascript:void(0);" title="Site Normal">-</button>
+      
+              <!-- Site Auto Contraste -->
+              <button id="contraste" class="contraste" href="javascript:void(0);" title="Alto contraste">-</button>
+      
+              <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+              <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+      
+            </div>
+          </div>
+
+        <!-- navbar -->
+        <nav>
+            <a id="logo" href="index.html">Fale com Minha Mão</a>
+            <nav id="nav-header">
+                <a id="logo" href="index.html">
+                    <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
+                </a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="faleconosco.html">Fale conosco</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastroUsuario.html">Cadastro</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- sobre nós -->
+    <section id="main-sobre-nos">
+        <ul class="cards_sobre">
+                <!-- Gabriel -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="/web/img/sobre-nos/deid.jpeg" alt="fotografia desenvolvedor Arthur"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Gabriel da Silva</h2>
+                        <center><p class="card_text">
+                            Back-end Dev
+                        </p></center>
+                        <a href="https://github.com/Bieldeid">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <!-- Giovanna Passos -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="/web/img/sobre-nos/gi.png" alt="fotografia desenvolvedor Giovanna"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Giovanna Passos</h2>
+                        <center><p class="card_text">
+                            Front-end Dev
+                        </p></center>
+                        <a href="https://github.com/giovannapfs">
+                            <img id="git-icon" src="/web/img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <!-- Karoline -->
+            <li class="cards_item_sobre">
+                <div class="card">
+                    <div class="card-image-sobre-nos"><img src="/web/img/sobre-nos/karol.png" alt="fotografia desenvolvedor Karoline"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Karoline de Souza</h2>
+                        <center><p class="card_text">
+                            Front-end Dev
+                        </p></center>
+                        <a href="https://github.com/koralinee">
+                            <img id="git-icon" src="../img/sobre-o-curso/github.svg" alt="github logo" height="60px" ; width="60px">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <h3>Fale com a minha mão &copy; 2023</h3>
+        <p>Site criado para projeto interdisciplinar</p>
+        <ul class="socials">
+            <li>
+                <a href="#instagram">Instagram</a>
+            </li>
+            <li>
+                <a href="#facebook">Facebook</a>
+            </li>
+        </ul>
+        <a href="#">
+            <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
+        </a>
+    </footer>
+
+    <!-- responsividade da navbar -->
+    <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/font-size.js"></script>
+
+
+
+    <!-- Adicionando o VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

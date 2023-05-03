@@ -11,6 +11,7 @@
             <header>
                 
             </header>
+            <div class="felipelindo">
              <div class="Login-Container">
                 <h1>Bem-vindo de volta!</h1>
                 <form name="formUsuario" method="POST">
@@ -36,17 +37,17 @@
                     
                     <div>
                         <div>
-                            <a class="inputSubmitEntrar" href="/src/main/resources/templates/crudAdminHome.html">Entrar</a>
+                            <a class="inputSubmitEntrar" href="{@/crud}">Entrar</a>
                 </form>
             </div>
-<br>
+        <br>
 
-       <center><div>    
-        <h4> Não possui conta? </h4>
-        <p>
-        <a href="/html/cadastroUsuario.html" class="btnCadastro">Cadastrar</a>
-        </p>
-    </div>
-
+            <center><div>    
+                <h4> Não possui conta? </h4>
+                <p>
+                <a href="{@/criar-usuario}" class="btnCadastro">Cadastrar</a>
+                </p>
+            </div>
+            </div>
 </body>
 </html>
