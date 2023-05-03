@@ -91,6 +91,12 @@ sidebarBtn.onclick = function() {
               <td th:text="${Usuario.email}"></td>
               <td th:text="${Usuario.senha}"></td>
               <td th:text="${Usuario.telefone}"></td>
+              <td class="acao">
+                <a td:href="@{/atualizar-usuario-admin/{id} (id=$(Usuario.id))}">Editar</a>
+              </td>
+              <td class="acao">
+                <a td:href="@{/deletar-usuario-admin/{id} (id=${Usuario.id})}"></a>
+              </td>
             </tr>
           </tbody>
         </table>
