@@ -90,7 +90,7 @@ public class GUIAdminController {
     // Requisição GET que irá mostrar a página de atualização de cliente
     @GetMapping("/atualizar-usuario-admin/{id}")
     public ModelAndView getUsuarioAdmin(@PathVariable("id") long id) {
-        ModelAndView mv = new ModelAndView("");
+        ModelAndView mv = new ModelAndView("atualizarUsuario");
         mv.addObject("cliente", service.consultaPorId(id).get());
 
         return mv;

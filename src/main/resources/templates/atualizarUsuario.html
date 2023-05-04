@@ -6,7 +6,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
             <script th:src="@{/js/adicionarAluno.js}"></script>
-            <title>Cadastro</title>
+            <title>Atualizar Usuario</title>
         </head>
         <body>
             <header>
@@ -14,7 +14,7 @@
             <div class="felipelindo">
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form action="#" th:action="@{/criar-usuario}" th:object="${usuario}" onsubmit="return validar();" method="POST">
+                <form action="#" th:action="@{/atualizar-usuario-admin/{id} (id=${Usuario.id})}" th:object="${usuario}" onsubmit="return validar();" method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
@@ -62,21 +62,12 @@
                         </div>                 
                     </div>
                     <div>
-                        <h2>Termos e Condições</h2>
-                        <div>
-                            <input type="checkbox" class="termosCondicoes" name="termosCondicoes" value="Termos">
-                            <label for="vehicle1">Eu aceito os <a href="#" class="btnTermos">Termos e Condições</a></label><br>
-                        </div>
-                    </div>
-                    <div>
                         <center><div>
                             <a></a>
-                            <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
+                            <input type="submit" value="Atualizar" id= "Cadastrar" class="inputSubmitCadastrar">
                         </div>
                         <br>
-                        <h3>OU</h3>
-                        <p>Já possui conta?</p>
-                        <a href="@{/login}" class="btnLogin">Fazer login</a>
+                        <a href="@{/crudAluno}" class="btnLogin">Voltar</a>
                         
                     </div></center>        
                 </form>
