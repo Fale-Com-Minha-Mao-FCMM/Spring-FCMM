@@ -13,8 +13,8 @@
             </header>
             <div class="felipelindo">
             <div class="Cadastro-Container">
-                <h1>Bem-vindo!</h1>
-                <form action="#" th:action="@{/atualizar-usuario-admin/{id} (id=${Usuario.id})}" th:object="${usuario}" onsubmit="return validar();" method="POST">
+                <h1>Atualizar Dados do Usuario</h1>
+                <form action="#" th:action="@{/atualizar-usuario-admin/{id} (id=${usuario.id})}" th:object="${usuario}" onsubmit="return validar();" method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>

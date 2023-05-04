@@ -91,7 +91,7 @@ public class GUIAdminController {
     @GetMapping("/atualizar-usuario-admin/{id}")
     public ModelAndView getUsuarioAdmin(@PathVariable("id") long id) {
         ModelAndView mv = new ModelAndView("atualizarUsuario");
-        mv.addObject("cliente", service.consultaPorId(id).get());
+        mv.addObject("usuario", service.consultaPorId(id).get());
 
         return mv;
     }

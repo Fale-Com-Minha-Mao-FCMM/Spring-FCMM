@@ -197,7 +197,6 @@ iframe {
   background: #003087;
   height: 12vh;
   top: 50px;
-  position: fixed;
   width: 100vw;
   z-index: 1;
 }
@@ -921,7 +920,6 @@ text-decoration: none;
 
 .Login-Container{
   top: 100px;
-  margin-top: 20vh;
   margin-bottom: 20vh;
   left: 295px;
   width: 480px;
