@@ -79,7 +79,7 @@ public ModelAndView visuFaleConosco() {
 public ModelAndView visuSobreNos() {
     return new ModelAndView("sobrenos");
 }
-@GetMapping("/informacoes")
+@GetMapping("/infos")
 public ModelAndView visuInformacoes() {
     return new ModelAndView("informacoesUsuario");
 }
