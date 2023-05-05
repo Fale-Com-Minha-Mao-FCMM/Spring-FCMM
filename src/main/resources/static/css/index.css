@@ -2083,3 +2083,40 @@ nav .sidebar-button i{
   padding: 0.4rem 6rem;
 
 }
+
+/*nav-bar usuario*/
+
+.nav-list-user {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list-user a{
+  list-style: none;
+  text-decoration: none;
+  color: #FFF;
+}
+.nav-list-user li ul a{
+  list-style: none;
+}
+
+.nav-list-user li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+  list-style: none;
+}
+
+.nav-list-user:hover>ul.nav-list2-user {
+  display: block;
+  top: 45px;
+  left: 0;
+  padding: 5px;
+  width: 200px;
+  list-style: none;
+}
+
+.nav-list-user ul.nav-list2-user a {
+  width: 100px;
+  padding: 0 20px;
+  list-style: none;
+}

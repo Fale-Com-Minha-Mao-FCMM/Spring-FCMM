@@ -66,6 +66,21 @@ public ModelAndView homeUsuario() {
     return new ModelAndView("homeUsuario");
 }
 
+@GetMapping("/capitulos")
+public ModelAndView visucapitulos() {
+    return new ModelAndView("capitulos");
+}
 
-
+@GetMapping("/faleConosco")
+public ModelAndView visuFaleConosco() {
+    return new ModelAndView("faleconosco");
+}
+@GetMapping("/sobreNos")
+public ModelAndView visuSobreNos() {
+    return new ModelAndView("sobrenos");
+}
+@GetMapping("/informacoes")
+public ModelAndView visuInformacoes() {
+    return new ModelAndView("informacoesUsuario");
+}
 }
