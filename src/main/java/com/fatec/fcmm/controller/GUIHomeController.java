@@ -61,7 +61,10 @@ public ModelAndView formLogin() {
 //     return new ModelAndView("crudAdminCapitulos");
 // }
 
-// @GetMapping
+@GetMapping("/home")
+public ModelAndView homeUsuario() {
+    return new ModelAndView("homeUsuario");
+}
 
 
 

@@ -1,39 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen"/>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html lang="pt-br" style="overflow-x:hidden;">
 
-    <title>Home</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="manifest" href="/web/manifest.json">
+  <link rel="stylesheet" th:href="@{css/index.css}" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="../static/validarCadastro.js"></script>
+    <script src="../js/contraste.js"></script> -->
 </head>
+
 <body>
-    <header>
-        <nav class="logo2">
-            <!-- navbar -->
-            <nav>
-                <a id="logo" th:href="index.html">Fale com Minha Mão</a>
-            <nav id="nav-header">
-                <a id="logo" th:href="index.html">
-                <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
-                </a>
-  
-            <ul class="nav-list">
-            <li><a href="faleconosco.html">Fale conosco</a></li>
-            <li><a href="sobrenos.html">Sobre nós</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="cadastroUsuario.html">Cadastro</a></li>
-            <li><a href="cadastroUsuario.html"></a></li>
-            </ul>
-        </nav>
-        </nav>
-    </header>
-    <section>
-        <h1>Home  da página</h1>
+  <header>
+    <nav>
+      <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
+      <nav id="nav-header">
+        <a id="logo" th:href="@{/}">
+          <img th:src="@{/img/logo/logo.png}" alt="logo Fale com a minha mão">
+        </a>
+        <ul class="nav-list">
+          <li><a th:href="@{/}">Início</a></li>
+          <li><a th:href="@{/}">Fale conosco</a></li>
+          <li><a th:href="@{/}">Sobre nós</a></li>
+          <li><a th:href="@{/}">Olá, usuário</a></li>
+          <li><a th:href="@{/}">Sair</a></li>
+        </ul>
+      </nav>
+      <!-- responsividade da navbar -->
+      <script src="../js/mobile-navbar.js"></script>
+      <script src="../js/font-size.js"></script>
+
+      <!-- Adicionando o VLibras -->
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      </ul>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- conteudo da home -->
+
+  <article id="home-content">
+    <section class="vh100">
+      <h1>Fale com a minha mão</h1>
+      <p>Este é um curso voltado para quem possui interesse em aprender a Língua Brasileira de Sinais.</p>
     </section>
+
+    <section class="vh100">
+      <blockquote cite="Paulo Freire">
+        <h3>“Se a educação sozinha não transforma a sociedade, sem ela tampouco a sociedade muda.”</h3>
+        <p>Paulo Freire</p>
+      </blockquote>
+    </section>
+
+    <section class="vh100">
+      <blockquote cite="John Green">
+        <h4>A língua de sinais não são apenas gestos, é conexão!
+          Aprenda de forma simplificada e rápida, se conecte ainda mais
+          com as pessoas.
+        </h4>
+      </blockquote>
+    </section>
+
+    <section class="vh100">
+      <blockquote cite="Victor Hugo">
+        <h4>
+          O Fcmm é um curso inovador e ágil adaptado para qualquer pessoa.
+        </h4>
+      </blockquote>
+    </section>
+
+    <section class="vh100">
+      <h2>Achou interessante? Saiba mais</h2>
+      <a href="cadastroUsuario.html"><button class="btn">
+          Cadastre-se
+        </button>
+      </a>
+    </section>
+  </article>
 </body>
+<!-- footer -->
+<footer id="footer">
+  <h3>Fale com a minha mão &copy; 2023</h3>
+  <p>Site criado para projeto interdisciplinar da Fatec Zona Leste</p>
+</footer>
 </html>
