@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <title>Minhas informações</title>
   <link rel="manifest" href="/web/manifest.json">
-  <link rel="stylesheet" th:href="@{css/index.css}" />
+  <link rel="stylesheet" th:href="@{css/index.css}">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,21 +76,19 @@
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
                                 <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
                             </div>
-                        </div>
-                        <div class="extras" >
                             <div>
-                                <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
+                                <label for="formNumeroCelular" class="textNumeroCelular2">Número de celular*</label><br>
+                                <input type="tel" class="inputNumeroCelular2" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
                             </div>
-                        </div>                 
+                        </div>              
                     </div>
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
-                            <div class="emails">
+                            <div class="email2">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
+                                    <input type="email" class="inputEmail2" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
                                 </div>
                             </div>
                         </div>
@@ -105,14 +103,15 @@
                                     <input type="password" class="inputNovaSenha" name="inputNovaSenha" placeholder="************" th:field="*{senha}"><br>
                                 </div>
                                 <div>
-                                    <label for="formConfirmaSenha">Confirme nova Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
+                                    <label for="formConfirmaSenha" class="textConfirmaNovaSenha">Confirme nova Senha* </label><br>
+                                    <input type="password" class="inputConfirmaNovaSenha" name="inputConfirmaNovaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
 
-                    <input type="submit" value="Salvar alterações" id="salvarAlteracoes" class="inputSubmitSalvar">
+                    <center><input type="submit" value="Salvar alterações" id="salvarAlteracoes" class="inputSubmitSalvar"></center>
       
                 </form>
             </div>

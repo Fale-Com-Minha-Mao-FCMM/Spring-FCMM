@@ -2120,3 +2120,68 @@ nav .sidebar-button i{
   padding: 0 20px;
   list-style: none;
 }
+
+/*form editar informações*/
+.Cadastro-Container .textNumeroCelular2{
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  margin-left: 24px;
+  flex-direction: column;
+}
+.Cadastro-Container .inputNumeroCelular2{
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  margin-left: 24px;
+  flex-direction: column;
+}
+
+
+.Cadastro-Container .inputConfirmaNovaSenha{
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.Cadastro-Container .textConfirmaNovaSenha{
+  margin-left: 24px;
+}
+
+.Cadastro-Container .emails{
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  width: 200px;
+}
+.Cadastro-Container .inputEmail2{
+  top:2px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+
+.Cadastro-Container .inputSubmitSalvar{
+  display: flex;
+  padding: 10px 82px;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  background: #003087;
+  color: #fff;
+  top:24px;
+  margin-bottom: 24px;
+  text-decoration: none;
+  }
+
+  
