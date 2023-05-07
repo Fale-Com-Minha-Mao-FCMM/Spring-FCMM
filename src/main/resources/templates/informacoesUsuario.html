@@ -28,13 +28,13 @@
           <img th:src="@{/img/logo/logo.png}" alt="logo Fale com a minha mão">
         </a>
         <ul class="nav-list-user">
-          <li><a th:href="@{/homegit}">Início</a></li>
-          <li><a th:href="@{/faleConosco}">Fale conosco</a></li>
-          <li><a th:href="@{/sobreNos}">Sobre nós</a></li>
+          <li><a th:href="@{/home}">Início</a></li>
+          <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
+          <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
           <li><a>Olá, usuário</a></li>
             <ul class="nav-list2-user">
               <li><a th:href="@{/capitulos}">Capítulos</a></li>
-              <li><a th:href="@{/infos}">Minhas informações</a></li>
+              <li><a th:href="@{/informacoes}">Minhas informações</a></li>
               </li>
             </ul>
           </li>
@@ -77,7 +77,7 @@
                                 <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
                             </div>
                             <div>
-                                <label for="formNumeroCelular" class="textNumeroCelular2">Número de celular*</label><br>
+                                <label for="formNumeroCelular" class="textNumeroCelular2">Número de celular* </label><br>
                                 <input type="tel" class="inputNumeroCelular2" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
                             </div>
                         </div>              

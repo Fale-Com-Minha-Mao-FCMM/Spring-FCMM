@@ -67,20 +67,24 @@ public ModelAndView homeUsuario() {
 }
 
 @GetMapping("/capitulos")
-public ModelAndView visucapitulos() {
+public ModelAndView capitulos() {
     return new ModelAndView("capitulos");
 }
 
-@GetMapping("/faleConosco")
-public ModelAndView visuFaleConosco() {
+@GetMapping("/fale-conosco")
+public ModelAndView FaleConosco() {
     return new ModelAndView("faleconosco");
 }
-@GetMapping("/sobreNos")
-public ModelAndView visuSobreNos() {
+@GetMapping("/sobre-nos")
+public ModelAndView SobreNos() {
     return new ModelAndView("sobrenos");
 }
-@GetMapping("/infos")
-public ModelAndView visuInformacoes() {
+@GetMapping("/informacoes")
+public ModelAndView Informacoes() {
     return new ModelAndView("informacoesUsuario");
+}
+@GetMapping("/acessibilidade")
+public ModelAndView acessibilidade() {
+    return new ModelAndView("acessibilidade");
 }
 }
