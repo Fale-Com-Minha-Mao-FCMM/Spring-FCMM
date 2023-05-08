@@ -28,10 +28,10 @@
           <img th:src="@{/img/logo/logo.png}" alt="logo Fale com a minha mão">
         </a>
         <ul class="nav-list-user">
-          <li><a th:href="@{/homegit}">Início</a></li>
-          <li><a th:href="@{/faleConosco}">Fale conosco</a></li>
-          <li><a th:href="@{/sobreNos}">Sobre nós</a></li>
-          <li><a>Olá, usuário</a></li>
+          <li><a th:href="@{/home}">Início</a></li>
+          <li><a th:href="@{/}">Fale conosco</a></li>
+          <li><a th:href="@{/}">Sobre nós</a></li>
+          <li><a>Olá, usuário</a>
             <ul class="nav-list2-user">
               <li><a th:href="@{/capitulos}">Capítulos</a></li>
               <li><a th:href="@{/informacoes}">Minhas informações</a></li>
@@ -62,50 +62,34 @@
     </nav>
   </header>
 
-  <!-- conteudo da home -->
-
-  <article id="home-content">
-    <section class="vh100">
-      <h1>Fale com a minha mão</h1>
-      <p>Este é um curso voltado para quem possui interesse em aprender a Língua Brasileira de Sinais.</p>
-    </section>
-
-    <section class="vh100">
-      <blockquote cite="Paulo Freire">
-        <h3>“Se a educação sozinha não transforma a sociedade, sem ela tampouco a sociedade muda.”</h3>
-        <p>Paulo Freire</p>
-      </blockquote>
-    </section>
-
-    <section class="vh100">
-      <blockquote cite="John Green">
-        <h4>A língua de sinais não são apenas gestos, é conexão!
-          Aprenda de forma simplificada e rápida, se conecte ainda mais
-          com as pessoas.
-        </h4>
-      </blockquote>
-    </section>
-
-    <section class="vh100">
-      <blockquote cite="Victor Hugo">
-        <h4>
-          O Fcmm é um curso inovador e ágil adaptado para qualquer pessoa.
-        </h4>
-      </blockquote>
-    </section>
-
-    <section class="vh100">
-      <h2>Achou interessante? Saiba mais</h2>
-      <a href="cadastroUsuario.html"><button class="btn">
-          Cadastre-se
-        </button>
-      </a>
-    </section>
-  </article>
-</body>
-<!-- footer -->
+  <body>
+    <div id="capitulos">
+        <div class="capitulos-details">
+        <img th:src="@{/img/backgrounds/bg3.jpg}">
+        <div class="capitulos-title">
+        <p> Capítulo 1 </p>
+        <a class="btn_capitulo" href="#">Revisar</a>
+      </div>
+      </div>
+      <div class="capitulos-details">
+        <img th:src="@{/img/backgrounds/bg2.jpg}">
+        <div class="capitulos-title">
+        <p> Capítulo 2 </p>
+        <a class="btn_capitulo" href="#">Revisar</a>  <!--Falta configurar o HREF do botão para visualizar o capítulo-->
+      </div>
+      </div>
+      <div class="capitulos-details">
+        <img th:src="@{/img/backgrounds/bg1.jpg}">
+        <div class="capitulos-title">
+        <p> Capítulo 3 </p>
+        <a class="btn_capitulo" href="#">Revisar</a>
+      </div>
+      </div>
+    </div>
+  </body>
+  <!-- footer -->
 <footer id="footer">
-  <h3>Fale com a minha mão &copy; 2023</h3>
-  <p>Site criado para projeto interdisciplinar da Fatec Zona Leste</p>
-</footer>
-</html>
+    <h3>Fale com a minha mão &copy; 2023</h3>
+    <p>Site criado para projeto interdisciplinar da Fatec Zona Leste</p>
+  </footer>
+  </html>

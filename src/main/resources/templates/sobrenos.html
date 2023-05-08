@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/web/css/index.css">
+    <link rel="stylesheet" th:href="@{css/index.css}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../js/contraste.js"></script>
@@ -37,25 +37,25 @@
           </div>
 
         <!-- navbar -->
-        <nav>
-            <a id="logo" href="index.html">Fale com Minha Mão</a>
-            <nav id="nav-header">
-                <a id="logo" href="index.html">
-                    <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
-                </a>
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="faleconosco.html">Fale conosco</a></li>
-                    <li><a href="sobrenos.html">Sobre nós</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastroUsuario.html">Cadastro</a></li>
-                </ul>
-            </nav>
-    </header>
+<nav>
+    <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
+    <nav id="nav-header">
+        <a id="logo" th:href="@{/}">
+            <img th:src="@{/img/logo/logo.png}" alt="logo Fale com a minha mão">
+        </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
+            <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
+        </ul>
+    </nav>
+  </header>
 
     <!-- sobre nós -->
     <section id="main-sobre-nos">
@@ -113,13 +113,7 @@
         <h3>Fale com a minha mão &copy; 2023</h3>
         <p>Site criado para projeto interdisciplinar</p>
         <ul class="socials">
-            <li>
-                <a href="#instagram">Instagram</a>
-            </li>
-            <li>
-                <a href="#facebook">Facebook</a>
-            </li>
-        </ul>
+
         <a href="#">
             <img id="git-icon" src="../img/sobre-o-curso/github.svg" height="60px" ; width="60px">
         </a>

@@ -7,6 +7,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.fatec.fcmm.model.Cadastro;
 import com.fatec.fcmm.services.MantemCadastro;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 //Essa classe será responsável por controlar e retornar as views.
 
@@ -61,8 +63,33 @@ public ModelAndView formLogin() {
 //     return new ModelAndView("crudAdminCapitulos");
 // }
 
-// @GetMapping
+@GetMapping("/home")
+public ModelAndView homeUsuario() {
+    return new ModelAndView("homeUsuario");
+}
 
+@GetMapping("/capitulos")
+public ModelAndView capitulos() {
+    return new ModelAndView("capitulos");
+}
 
+@GetMapping("/fale-conosco")
+public ModelAndView FaleConosco() {
+    return new ModelAndView("faleconosco");
+}
+@GetMapping("/sobre-nos")
+public ModelAndView SobreNos() {
+    return new ModelAndView("sobrenos");
+}
+
+@GetMapping("/acessibilidade")
+public ModelAndView acessibilidade() {
+    return new ModelAndView("acessibilidade");
+}
+
+@GetMapping("/informacoes")
+public ModelAndView InformacoesUsuario() {
+    return new ModelAndView("informacoes");
+}
 
 }
