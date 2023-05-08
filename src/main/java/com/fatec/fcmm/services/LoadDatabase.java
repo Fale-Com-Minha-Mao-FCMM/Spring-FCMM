@@ -18,11 +18,7 @@ import com.fatec.fcmm.model.Usuario.MantemUsuarioRepository;
         @Bean
         CommandLineRunner initDatabase(MantemUsuarioRepository repository) {
             return args -> {
-                repository.deleteAll();
-                Usuario usuario1 = new Usuario();
-                log.info("Preloading " + repository.save(usuario1));
-                Usuario usuario2 = new Usuario();
-                log.info("Preloading " + repository.save(usuario1));
+               
             };
         }
     }

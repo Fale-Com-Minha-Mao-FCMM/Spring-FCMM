@@ -32,6 +32,9 @@ public class UsuarioDTO {
     @NotBlank (message = "Telefone é requirido")
     private String telefone;
 
+    @NotBlank (message = "Capitulo é requirido")
+	private Integer capAtual = 1;
+
     //Construtores
     public UsuarioDTO() {}
 
@@ -42,7 +45,8 @@ public class UsuarioDTO {
             @NotBlank(message = "Confirmação de senha é requirida") String confirmarSenha,
             @NotBlank(message = "Nome é requirido") String nome,
             @NotBlank(message = "Sobrenome é requirido") String sobrenome,
-            @NotBlank(message = "Telefone é requirido") String telefone) {
+            @NotBlank(message = "Telefone é requirido") String telefone,
+            @NotBlank(message = "Capitulo é requirido") Integer capAtual) {
         this.email = email;
         this.confirmarEmail = confirmarEmail;
         this.senha = senha;
@@ -50,6 +54,7 @@ public class UsuarioDTO {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
+        this.capAtual = capAtual;
     }
 
     //Getters e Setters
@@ -110,8 +115,16 @@ public class UsuarioDTO {
         this.telefone = telefone;
     }
 
+    public Integer getCapAtual() {
+		return capAtual;
+	}
+
+	public void setCapAtual(Integer capAtual) {
+		this.capAtual = capAtual;
+	}
+
     public Usuario retornaUmUsuario(){
-        return new Usuario(email, confirmarEmail, senha, confirmarSenha, nome, sobrenome, telefone);
+        return new Usuario(email, confirmarEmail, senha, confirmarSenha, nome, sobrenome, telefone, capAtual);
     }
 
    

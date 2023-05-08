@@ -52,7 +52,7 @@ public class MantemUsuarioI implements MantemUsuario {
     @Override
     public Optional<Usuario> atualiza (Long id, Usuario usuario) {
         logger.info(">>>>>> 1.servico atualiza informações do usuario chamado");
-        Usuario usuarioModificado = new Usuario(usuario.getEmail(), usuario.getConfirmarEmail(), usuario.getSenha(), usuario.getConfirmarSenha(), usuario.getNome(), usuario.getSobrenome(), usuario.getTelefone());
+        Usuario usuarioModificado = new Usuario(usuario.getEmail(), usuario.getConfirmarEmail(), usuario.getSenha(), usuario.getConfirmarSenha(), usuario.getNome(), usuario.getSobrenome(), usuario.getTelefone(), usuario.getCapAtual());
         usuarioModificado.setId(id);
         logger.info(usuarioModificado.getId());
         return Optional.ofNullable(repository.save(usuarioModificado));
