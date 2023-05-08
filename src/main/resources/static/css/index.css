@@ -2185,9 +2185,10 @@ nav .sidebar-button i{
   text-decoration: none;
   }
 
-  /* === FOOTER === */
+  /* === FOOTER LOGIN === */
 
-.footerLogin {
+#footerLogin {
+  position:absolute;
   width: 100%;
   text-align: center;
   align-items: center;
@@ -2198,11 +2199,11 @@ nav .sidebar-button i{
   justify-content: center;
   color: #fff;
   z-index: 1;
-  margin-top: 60%;
-  position: absolute;
+  margin-top: 82%;
+  bottom: -17em;
 }
 
-.footerLogin h3 {
+#footerLogin h3 {
   color: #fff;
   padding-bottom: 10px;
   font-weight: 400;
