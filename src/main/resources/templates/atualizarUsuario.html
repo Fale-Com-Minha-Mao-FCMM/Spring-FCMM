@@ -4,17 +4,32 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
-            <script th:src="@{/js/adicionarAluno.js}"></script>
-            <title>Atualizar Usuario</title>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" media="screen" />
+            <script src="/js/validarCadastro.js"></script>
+            <title>Atualizar</title>
         </head>
         <body>
             <header>
-            </header>
+                            <!-- Adicionando o VLibras -->
+                            <div vw class="enabled">
+                                <div vw-access-button class="active"></div>
+                                <div vw-plugin-wrapper>
+                                <div class="vw-plugin-top-wrapper"></div>
+                                </div>
+                            </div>
+                            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                            <script>
+                                new window.VLibras.Widget('https://vlibras.gov.br/app');
+                            </script>
+                                    </ul>
+                                </div>
+                            </div>
+                      </nav>
+        </header>
             <div class="felipelindo">
             <div class="Cadastro-Container">
-                <h1>Atualizar Dados do Usuario</h1>
-                <form action="#" th:action="@{/atualizar-usuario-admin/{id} (id=${usuario.id})}" th:object="${usuario}" onsubmit="return validar();" method="POST">
+                <h1>Atualizar Usuario</h1>
+                <form onsubmit= "return validar();" action="#" th:action="@{/atualizar-usuario-admin/{id} (id = ${usuario.id})}" th:object="${usuario}"  method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>
@@ -23,10 +38,6 @@
                                     <label for="formEmail">Email* </label><br>
                                     <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
                                 </div>
-                                <div>
-                                    <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}"><br>
-                                </div>
                             </div>
                         </div>
                         <div>
@@ -34,10 +45,6 @@
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
                                     <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
-                                </div>
-                                <div>
-                                    <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
                                 </div>
                             </div>
                         </div>
@@ -64,9 +71,11 @@
                     <div>
                         <center><div>
                             <a></a>
-                            <input type="submit" value="Atualizar" id= "Cadastrar" class="inputSubmitCadastrar">
+                            <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
                         </div>
                         <br>
+                        <h3>OU</h3>
+                        <p>Quer sair da atualização</p>
                         <a href="@{/crudAluno}" class="btnLogin">Voltar</a>
                         
                     </div></center>        

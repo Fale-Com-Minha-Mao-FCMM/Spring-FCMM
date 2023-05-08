@@ -56,6 +56,6 @@ public class GUIUsuarioController {
             mv.addObject("message", "Dados inválidos");
         }
 
-        return new RedirectView("/");
+        return new RedirectView("/crudAluno");
     }
 }

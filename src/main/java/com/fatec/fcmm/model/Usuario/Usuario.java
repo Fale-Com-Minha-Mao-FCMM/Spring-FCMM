@@ -45,6 +45,9 @@ public class Usuario {
     @NotBlank (message = "Telefone é requirido")
     private String telefone;
 
+	@NotBlank (message = "Capitulo é requirido")
+	private Integer capAtual = 1;
+
 	//Getters and Setters
 
 	public long getId() {
@@ -111,6 +114,14 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
+	public Integer getCapAtual() {
+		return capAtual;
+	}
+
+	public void setCapAtual(Integer capAtual) {
+		this.capAtual = capAtual;
+	}
+
 	// Construtores
 
 	public Usuario() {}
@@ -121,7 +132,8 @@ public class Usuario {
 			@NotBlank(message = "Confirmação de senha é requirida") String confirmarSenha,
 			@NotBlank(message = "Nome é requirido") String nome,
 			@NotBlank(message = "Sobrenome é requirido") String sobrenome,
-			@NotBlank(message = "Telefone é requirido") String telefone) {
+			@NotBlank(message = "Telefone é requirido") String telefone,
+			@NotBlank(message = "Capitulo é requirido") Integer capAtual){
 		this.email = email;
 		this.confirmarEmail = confirmarEmail;
 		this.senha = senha;
@@ -129,6 +141,7 @@ public class Usuario {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.telefone = telefone;
+		this.capAtual = capAtual;
 	}
 	
 	
