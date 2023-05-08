@@ -8,7 +8,6 @@
   <link rel="manifest" href="/web/manifest.json">
   <link rel="stylesheet" th:href="@{css/index.css}">
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -42,8 +41,8 @@
         </ul>
       </nav>
       <!-- responsividade da navbar -->
-      <script src="../js/mobile-navbar.js"></script>
-      <script src="../js/font-size.js"></script>
+      <script th:src="@{/js/mobile-navbar.js}"></script>
+      <script th:src="@{/js/font-size.js}"></script>
 
       <!-- Adicionando o VLibras -->
       <div vw class="enabled">
@@ -70,15 +69,15 @@
                         <div class="nomeCompleto">
                             <div>
                                 <label for="formName">Nome* </label><br>
-                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}"><br>
+                                <!--<input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}">-->
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
+                                <!--<input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>-->
                             </div>
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular2">Número de celular* </label><br>
-                                <input type="tel" class="inputNumeroCelular2" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
+                                <!--<input type="tel" class="inputNumeroCelular2" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>-->
                             </div>
                         </div>              
                     </div>
@@ -88,7 +87,7 @@
                             <div class="email2">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail2" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
+                                    <!--<input type="email" class="inputEmail2" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>-->
                                 </div>
                             </div>
                         </div>
@@ -96,15 +95,15 @@
                             <div class="senhas">
                                 <div>
                                     <label for="formSenha">Senha atual* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
+                                    <!--<input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>-->
                                 </div>
                                 <div>
                                     <label for="formSenha">Nova senha* </label><br>
-                                    <input type="password" class="inputNovaSenha" name="inputNovaSenha" placeholder="************" th:field="*{senha}"><br>
+                                    <!--<input type="password" class="inputNovaSenha" name="inputNovaSenha" placeholder="************" th:field="*{senha}"><br>-->
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha" class="textConfirmaNovaSenha">Confirme nova Senha* </label><br>
-                                    <input type="password" class="inputConfirmaNovaSenha" name="inputConfirmaNovaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
+                                    <!--<input type="password" class="inputConfirmaNovaSenha" name="inputConfirmaNovaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>-->
                                 </div>
                             </div>
                             
