@@ -325,13 +325,15 @@ iframe {
 #main-sobre-nos {
   margin-top: 30px;
   padding-bottom: 30px;
+  font-size: 20px;
+  color:#003087 
 }
 
 
 .cards_sobre {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin-top: -5rem;
   padding: 0;
   flex-direction: row;
   flex-wrap: wrap;
@@ -587,6 +589,8 @@ nav.main-menu li.active>a,
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 2rem;
+  border-radius: 32px;
 }
 
 .card_content {
@@ -667,7 +671,7 @@ footer h3 {
 }
 
 #git-icon {
-  width: 100px;
+  width: 100%;
 }
 
 
@@ -915,8 +919,8 @@ text-decoration: none;
   align-items: center;
   height: 100%;
   padding: 5rem 0 5rem 0;
-  
 }
+
 
 .Login-Container{
   top: 100px;
@@ -2238,4 +2242,32 @@ nav .sidebar-button i{
 
 .socialsLogin a:hover i {
   color: aqua;
+}
+
+/*curiosidades*/
+.curiosidade{
+  width: 80%;
+  display: flex;
+  padding: 32px;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  background-color: #003087;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+.curiosidadeText{
+  margin-right: 24px;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.curiosidadeImg{
+  margin-top: -3px;
+}
+#curiosidadeTitle{
+  font-size: 30px;
+  color:#003087;
+  margin-top: 5rem;
+  margin-bottom: -2rem;
 }
