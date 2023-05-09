@@ -4,8 +4,10 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
-            <script src="/js/validarCadastro.js"></script>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" media="screen" />
+            <script src="../static/js/justValidate/just-validate.production.min.js"></script>
+            <script src="../static/js/validar.js"></script>
+
             <title>Cadastro</title>
         </head>
         <body>
@@ -53,11 +55,25 @@
                             <div class="emails">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail" name="inputEmail"  for="cadastro-usuario" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
+                                    <input 
+                                    type="email" 
+                                    class="inputEmail"
+                                    name="inputEmail"  
+                                    for="cadastro-usuario" 
+                                    id="inputEmail"
+                                    placeholder="seuemail@email.com" 
+                                    th:field="*{email}" required>
+                                    <br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}"><br>
+                                    <input 
+                                    type="email" 
+                                    class="inputConfirmaEmail" 
+                                    name="inputConfirmaEmail" 
+                                    id="inputConfirmaEmail" 
+                                    placeholder="seuemail@email.com" 
+                                    th:field="*{confirmarEmail}"><br>
                                 </div>
                             </div>
                         </div>
@@ -65,11 +81,23 @@
                             <div class="senhas">
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
+                                    <input 
+                                    type="password" 
+                                    class="inputSenha" 
+                                    id="inputSenha" 
+                                    name="inputSenha" 
+                                    placeholder="************" 
+                                    th:field="*{senha}"><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
+                                    <input 
+                                    type="password" 
+                                    class="inputConfirmaSenha" 
+                                    id="inputConfirmaSenha" 
+                                    name="inputConfirmaSenha" 
+                                    placeholder="************" 
+                                    th:field="*{confirmarSenha}"><br>
                                 </div>
                             </div>
                         </div>
@@ -79,17 +107,33 @@
                         <div class="nomeCompleto">
                             <div>
                                 <label for="formName">Nome* </label><br>
-                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}"><br>
+                                <input 
+                                type="text" 
+                                class="inputName" 
+                                name="inputName"
+                                 placeholder="Edson" 
+                                 th:field="*{nome}"><br>
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
+                                <input 
+                                type="text" 
+                                class="inputSobrenome" 
+                                name="inputSobrenome" 
+                                placeholder="Saraiva" 
+                                th:field="*{sobrenome}"><br>
                             </div>
                         </div>
                         <div class="extras" >
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
+                                <input 
+                                type="tel" 
+                                class="inputNumeroCelular" 
+                                id="inputNumeroCelular" 
+                                name="inputNumeroCelular" 
+                                placeholder="+55 (11) 99999-9999" 
+                                th:field="*{telefone}"><br>
                             </div>
                         </div>                 
                     </div>
@@ -102,7 +146,11 @@
                     </div>
                     <div>
                         <center><div>
-                            <input type="submit" value="Cadastrar" id= "Cadastrar" class="inputSubmitCadastrar">
+                            <input 
+                            type="submit"
+                            value="Cadastrar" 
+                            id= "Cadastrar" 
+                            class="inputSubmitCadastrar">
                         </div>
                         <br>
                         <h3>OU</h3>

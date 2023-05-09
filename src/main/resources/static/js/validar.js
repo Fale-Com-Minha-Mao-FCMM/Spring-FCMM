@@ -1,10 +1,8 @@
 //const justValidateProductionMin = require("./justValidate/just-validate.production.min");
 
-const validar = new JustValidate('#cadastro-usuario'); 
-    {
-        
-    }
+const validar = new JustValidate(document.querySelector('#cadastro-usuario')); 
 
+    //Validação de Email
     validar.addField( '#inputEmail' , [
         { rule: 'required' , errorMessage: 'O campo e-mail é obrigatório'},
         { rule: 'email' ,  errorMessage: 'E-mail inválido.'}
@@ -26,8 +24,38 @@ const validar = new JustValidate('#cadastro-usuario');
                 }
                 return true;
             },
-            errorMessage: 'Os emails não coencidem',
+            errorMessage: 'Os emails não coencidem.',
         },
+    ])
+
+    //Validação de Senha
+    validar.addField( ' #inputSenha ', [
+        { rule: ' required ', errorMessage: ' O campo senha é obrigatório' },
+        { rule: 'strongPassword' , value: '8' , errorMessage: ' A senha deve conter no mínimo 8 caracteres '  }
+    ])
+    validar.addField( ' #inputConfirmaSenha ' , [
+        { 
+            rule: 'required' ,
+        },
+        {
+            validar: (value, fields) => {
+                if (
+                    fields [ '#inputSenha' ] &&
+                    fields [ '#inputSenha' ].elem
+                ){
+                    const inputConfirmaEmail = 
+                    fields [ ' #inputConfirmaSenha '] .elem.value;
+
+                    return value === inputConfirmaEmail
+          a      }
+                return true;
+            },
+            errorMessage: 'As senhas não coecidem.'
+        }
+    ])
+
+    validar.addField( '#inputNumeroCelular', [
+        { rule: ' required ', errorMessage: ' O campo Telefone é obrigatório ' }
     ])
 
 // const inputRules= {
