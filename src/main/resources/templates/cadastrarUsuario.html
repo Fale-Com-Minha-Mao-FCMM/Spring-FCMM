@@ -9,40 +9,7 @@
             <title>Cadastro</title>
         </head>
         <body>
-                <header>
-                    <nav>
-                      <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
-                      <nav id="nav-header">
-                        <a id="logo" th:href="@{/}">
-                          <img th:src="@{/img/logo/logo.png}" alt="logo Fale com a minha mão">
-                        </a>
-                        <ul class="nav-list">
-                          <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
-                          <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
-                          <li><a th:href="@{/login}">Login</a></li>
-                          <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
-                        </ul>
-                      </nav>
-                      <!-- responsividade da navbar -->
-                      <script src="../js/mobile-navbar.js"></script>
-                      <script src="../js/font-size.js"></script>
-                
-                      <!-- Adicionando o VLibras -->
-                      <div vw class="enabled">
-                        <div vw-access-button class="active"></div>
-                        <div vw-plugin-wrapper>
-                          <div class="vw-plugin-top-wrapper"></div>
-                        </div>
-                      </div>
-                      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-                      <script>
-                        new window.VLibras.Widget('https://vlibras.gov.br/app');
-                      </script>
-                      </ul>
-                      </div>
-                      </div>
-                    </nav>
-                  </header>
+            <header th:insert="~{fragments/header}"></header>
             <div class="felipelindo">
             <div class="Cadastro-Container">
                 <h1>Cadatrar Usuario</h1>

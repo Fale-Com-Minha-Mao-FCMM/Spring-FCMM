@@ -16,49 +16,8 @@
 
 <body>
 
-  <header>
-    <div class="acessibilidade">
-      <div class="btn-container">
-        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o
-            conteúdo [1]</a></label>
-        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu
-            [2]</a></label>
-        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
-        <label class="label-1"><a th:href="@{/acessibilidade}">ACESSIBILIDADE</a></label>
-        <label class="label-1">Contraste:</label>
-
-        <!-- Site Normal -->
-        <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
-
-        <!-- Site Auto Contraste -->
-        <button id="contraste" class="contraste" title="Alto contraste">-</button>
-
-        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-
-      </div>
-    </div>
-
-    <!-- navbar -->
-    <nav>
-      <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
-      <nav id="nav-header">
-        <a id="logo" th:href="@{/}">
-          <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
-        </a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
-          <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
-          <li><a th:href="@{/login}">Login</a></li>
-          <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
-        </ul>
-      </nav>
-  </header>
+  <header th:insert="~{fragments/header}"></header>
+  
   <article id="acessibilidade-content">
     <br>
     <h1 id="titulo">ACESSIBILIDADE</h1>
