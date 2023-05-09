@@ -88,6 +88,17 @@ iframe {
   margin-top: 55px;
 }
 
+.btnEnviar {
+  border-radius: 6px;
+  text-align: center;
+  padding: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  margin-top: 55px;
+}
+
 
 
 
@@ -181,6 +192,7 @@ iframe {
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 .nav-list a:hover {
