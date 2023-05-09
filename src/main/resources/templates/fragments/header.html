@@ -7,11 +7,11 @@
     </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </meta>
-    <title>SCC</title>
+    <title>Header</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/07afd95a3d.js"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/menu.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o conteúdo [1]</a></label>
             <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu [2]</a></label>
             <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
-            <label class="label-1"><a href="acessibilidade.html">ACESSIBILIDADE</a></label>
+            <label class="label-1"><a th:href="@{/acessibilidade}">ACESSIBILIDADE</a></label>
             <label class="label-1">Contraste:</label>
     
             <!-- Site Normal -->
@@ -38,22 +38,22 @@
     
         <!-- navbar -->
         <nav>
-          <a id="logo" th:href="{/}">Fale com Minha Mão</a>
+          <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
         <nav id="nav-header">
-          <a id="logo" th:href="{/}">
-            <img th:src="{/img/logo/ogo.png}" alt="logo Fale com a minha mão">
+          <a id="logo" th:href="@{/}">
+            <img th:src="@{../img/logo/logo.png}" alt="logo Fale com a minha mão">
           </a>
     
           <ul class="nav-list">
-            <li><a th:href="{/}">Fale conosco</a></li>
-            <li><a th:href="{/}">Sobre nós</a></li>
-            <li><a th:href="{@/login}">Login</a></li>
-            <li><a th:href="{@/criar-usuario}">Cadastro</a></li>
+            <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
+            <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
           </ul>
         </nav>
         <!-- responsividade da navbar -->
-        <script src="../js/mobile-navbar.js"></script>
-        <script src="../js/font-size.js"></script>
+        <script th:src="@{/js/mobile-navbar.js}"></script>
+        <script th:src="@{/js/font-size.js}"></script>
 
         <!-- Adicionando o VLibras -->
         <div vw class="enabled">
