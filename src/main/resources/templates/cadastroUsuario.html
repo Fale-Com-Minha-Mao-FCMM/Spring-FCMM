@@ -5,8 +5,8 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" media="screen" />
-            <script src="../static/js/justValidate/just-validate.production.min.js"></script>
-            <script src="../static/js/validar.js"></script>
+            <script src="/js/justValidate/just-validate.production.min.js"></script>
+            <script src="/js/validar.js"></script>
 
             <title>Cadastro</title>
         </head>
@@ -48,7 +48,12 @@
             <div class="felipelindo">
             <div class="Cadastro-Container">
                 <h1>Bem-vindo!</h1>
-                <form action="#" th:action="@{/criar-usuario}" th:object="${usuario}"  id="cadastro-usuario" method="POST">
+                <form 
+                id="cadastro-usuario" 
+                action="#" 
+                th:action="@{/criar-usuario}" 
+                th:object="${usuario}"  
+                method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>
                         <div>

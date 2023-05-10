@@ -1,6 +1,8 @@
-//const justValidateProductionMin = require("./justValidate/just-validate.production.min");
+const justValidateProductionMin = require("./justValidate/just-validate.production.min.js");
 
-const validar = new JustValidate(document.querySelector('#cadastro-usuario')); 
+    console.log("Testando validation")
+
+const validar = new JustValidate('cadastro-usuario'); 
 
     //Validação de Email
     validar.addField( '#inputEmail' , [
