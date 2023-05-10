@@ -22,13 +22,14 @@
     <div class="felipelindo">
     <div id="wrapper">
       <div id="header">
+        
         <h1 id="">Contate-nos</h1>
         <br>
         <p id="txtcontato">Você tem alguma dúvida ou uma reclamção? nos envie uma mensagem e responderemos o mais
           breve possível.</p>
           <br>
       </div>
-      <form action="/formulario-contato" method="post" id="form-fale-conosco">
+      <form action="https://formspree.io/f/xyyavyla" method="POST" id="form-fale-conosco">
         <div>
             <label for="nome">Nome</label>
             <input type="texto" id="nome" name="nome_usuario" placeholder="Digite seu nome:">
@@ -41,7 +42,8 @@
             <label for="texto">Texto:</label><br>
             <textarea id="texto" name="texto_usuario" rows="10" cols="100" placeholder="Digite aqui sua sugestão ou reclamação"></textarea>
             <div>   
-              <a th:href="@{/}" class="btnEnviar">Enviar</a>
+              <button type="submit" class="btnEnviar">Send</button>
+              <!--<a th:href="@{/}" class="btnEnviar">Enviar</a>-->
           </div>
         </div>
       </div>
