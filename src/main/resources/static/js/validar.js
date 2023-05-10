@@ -1,17 +1,17 @@
-const justValidateProductionMin = require("./justValidate/just-validate.production.min.js");
+//import JustValidate from './justValidate/just-validate.production.min.js'
 
-    console.log("Testando validation")
+console.log("Testando validation")
 
-const validar = new JustValidate('cadastro-usuario'); 
+const validar = new JustValidate('#cadastro-usuario'); 
 
     //Validação de Email
     validar.addField( '#inputEmail' , [
         { rule: 'required' , errorMessage: 'O campo e-mail é obrigatório'},
         { rule: 'email' ,  errorMessage: 'E-mail inválido.'}
     ])
-    validar.addField( ' #inputConfirmaEmail '  , [
+    .addField( ' #inputConfirmaEmail '  , [
         {
-            rule: 'required',
+            rule: 'required', errorMessage: 'O campo confirma e-mail é obrigatório'
         },
         {
             validar: (value, fields) =>{
@@ -35,7 +35,7 @@ const validar = new JustValidate('cadastro-usuario');
         { rule: ' required ', errorMessage: ' O campo senha é obrigatório' },
         { rule: 'strongPassword' , value: '8' , errorMessage: ' A senha deve conter no mínimo 8 caracteres '  }
     ])
-    validar.addField( ' #inputConfirmaSenha ' , [
+    .addField( ' #inputConfirmaSenha ' , [
         { 
             rule: 'required' ,
         },
