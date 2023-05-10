@@ -1,4 +1,4 @@
-const justValidateProductionMin = require("./justValidate/just-validate.production.min.js");
+//const justValidateProductionMin = require("./justValidate/just-validate.production.min.js");
 
     console.log("Testando validation")
 
