@@ -14,51 +14,11 @@
        
 </head>
 
-<body>
+<body >
 
-  <header>
-    <div class="acessibilidade">
-      <div class="btn-container">
-        <label class="label-1"><a href="#home-content" accesskey="1" title="Ir para contéudo da página">Ir para o
-            conteúdo [1]</a></label>
-        <label class="label-1"><a href="#nav" accesskey="2" title="Ir para o menu de navegação">Ir para menu
-            [2]</a></label>
-        <label class="label-1"><a href="#footer" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></label>
-        <label class="label-1"><a th:href="@{/acessibilidade}">ACESSIBILIDADE</a></label>
-        <label class="label-1">Contraste:</label>
-
-        <!-- Site Normal -->
-        <button id="semcontraste" class="semcontraste" title="Site Normal">-</button>
-
-        <!-- Site Auto Contraste -->
-        <button id="contraste" class="contraste" title="Alto contraste">-</button>
-
-        <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-
-      </div>
-    </div>
-
-    <!-- navbar -->
-    <nav>
-      <a id="logo" th:href="@{/}">Fale com Minha Mão</a>
-      <nav id="nav-header">
-        <a id="logo" th:href="@{/}">
-          <img src="../img/logo/logo.png" alt="logo Fale com a minha mão">
-        </a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
-          <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
-          <li><a th:href="@{/login}">Login</a></li>
-          <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
-        </ul>
-      </nav>
-  </header>
+  <header th:insert="~{fragments/header}"></header>
+  
+  <div id="content">
   <article id="acessibilidade-content">
     <br>
     <h1 id="titulo">ACESSIBILIDADE</h1>
@@ -111,26 +71,10 @@
     </p>
     <p>-Para traduzir, basta clicar sobre o ícone e selecionar o texto que deseja traduzir.</p>
   </article>
-
+  </div>
   <br>
   <br>
-  <footer id="footer">
-    <h3>Fale com a minha mão &copy; 2023</h3>
-    <p>Site criado para projeto interdisciplinar da Fatec Zona Leste.</p>
-    <ul class="socials">
-        <li><a th:href="@{/fale-conosco}">Fale conosco</a></li>
-        <li><a th:href="@{/sobre-nos}">Sobre nós</a></li>
-        <li><a th:href="@{/login}">Login</a></li>
-        <li><a th:href="@{/criar-usuario}">Cadastro</a></li>
-    </ul>
-    <p><a href="#">      
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:msFilter"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
-      </a></p>
-  </footer>
-
-  <!-- responsividade da navbar -->
-  <script src="../js/mobile-navbar.js"></script>
-  <script src="../js/font-size.js"></script>
+  <footer th:insert="~{fragments/footer}"></footer>
 </body>
 
 </html>

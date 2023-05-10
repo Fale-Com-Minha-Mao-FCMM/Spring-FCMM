@@ -9,23 +9,8 @@
             <title>Atualizar</title>
         </head>
         <body>
-            <header>
-                            <!-- Adicionando o VLibras -->
-                            <div vw class="enabled">
-                                <div vw-access-button class="active"></div>
-                                <div vw-plugin-wrapper>
-                                <div class="vw-plugin-top-wrapper"></div>
-                                </div>
-                            </div>
-                            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-                            <script>
-                                new window.VLibras.Widget('https://vlibras.gov.br/app');
-                            </script>
-                                    </ul>
-                                </div>
-                            </div>
-                      </nav>
-        </header>
+            <header th:insert="~{fragments/header}"></header>
+            <div id="content">
             <div class="felipelindo">
             <div class="Cadastro-Container">
                 <h1>Atualizar Usuario</h1>
@@ -82,5 +67,7 @@
                 </form>
             </div></center>
             </div>
+        </div>
         </body>
+        <footer th:insert="~{fragments/footer}"></footer>
     </html>
