@@ -114,7 +114,7 @@ iframe {
 .acessibilidade {
   top: 0;
   position: fixed;
-  background-color: #eee;
+  background-color: black;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -123,15 +123,16 @@ iframe {
   width: 100vw;
   height: 50px;
   z-index: 1;
-  color: #000;
+  color: yellow;
 }
 
 .acessibilidade a {
   font-size: 16px;
+  color: yellow;
 }
 
 .label-1 {
-  color: #000;
+  color: yellow;
   font-size: 14px;
 }
 
@@ -196,7 +197,7 @@ iframe {
 }
 
 .nav-list a {
-  color: #fff;
+  color: yellow;
   text-decoration: none;
   transition: 0.3s;
   font-weight: 600;
@@ -215,7 +216,7 @@ iframe {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #003087;
+  background: black;
   height: 12vh;
   top: 50px;
   width: 100vw;
@@ -286,15 +287,18 @@ iframe {
 
 #home-content h1 {
   font-size: 6vw;
+  color: yellow;
 }
 
 #home-content h3 {
   font-size: 3vw;
+  color: yellow;
 }
 
 #home-content p {
   text-align: center;
   font-size: 2vw;
+  color: yellow;
 }
 
 #home-content section {
