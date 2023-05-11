@@ -1,101 +1,55 @@
-const modal = document.querySelector('.modal-container')
-const tbody = document.querySelector('tbody')
-const sId = document.querySelector('#m-id')
-const sNome = document.querySelector('#m-nome')
-const sEmail = document.querySelector('#m-email')
-const sCelular = document.querySelector('#m-celular')
-const btnSalvar = document.querySelector('#btnSalvar')
-
-let itens
-let id
-
-function openModal(edit = false, index = 0) {
-  modal.classList.add('active')
-
-  modal.onclick = e => {
-    if (e.target.className.indexOf('modal-container') !== -1) {
-      modal.classList.remove('active')
-    }
-  }
-
-  if (edit) {
-    sId.value = itens[index].id
-    sNome.value = itens[index].nome
-    sEmail.value = itens[index].email
-    sCelular.value = itens[index].celular
-    id = index
-  } else {
-    sId.value = ''
-    sNome.value = ''
-    sEmail.value = ''
-    sCelular.value = ''
-  }
-  
+var link_css = "../css/arquivo.css";
+				
+if(getCookie2() == "contraste"){
+    link_css = "../css/contraste.css"; // se o valor do cookie capturado pela function getCookie2 for contraste, a variável link_css recebe como valor a folha de estilo contraste.css
+}else if(getCookie() == "default"){
+    link_css = "../css/index.css";
 }
 
-function editItem(index) {
+$(document).ready(function(){
+    
+    $("#contraste").click(function(){
+        setCookie("contraste");//contraste é o nome do cookie criado e consequentemente o parâmetro value da function setCookie. Ao clicar no link com id contraste, será setado o valor contraste para o cookie criado e ele irá executar a função getCookie2.
+        location.reload();			
+    });
+    
+    $("#semcontraste").click(function(){
+        setCookie("default")
+        location.reload();									
+    });
+    
+});
 
-  openModal(true, index)
+//<link rel=stylesheet href="contraste.css" type=text/css>
+$("head").append("<link rel=stylesheet href="+ " "+ link_css +" " +"type=text/css>");//altera a folha de estilo da página
+
+function setCookie(value){
+    var data = new Date(); //new Date()cria um novo objeto de data com a data e hora atuais :
+    data.setTime(data.getTime() + 600000);//O método setTime () define uma data e hora adicionando ou subtraindo um número especificado de milissegundos. getTime() retorna o número de milissegundos
+    
+    //cookies structure
+    document.cookie = "contraste="+value+"; expires="+data.toUTCString()+"; path=/"; //path - caminho do cookie. path=/ - cookie disponível em todo o domínio.
+    
+    
+}
+//O método toUTCString () retorna um objeto de data como uma string, de acordo com o UTC.
+//Dica: o Universal Coordinated Time (UTC) é o horário definido pelo World Time Standard.
+//Observação: o horário UTC é igual ao horário GMT.
+
+function getCookie(){
+    var cookie = document.cookie.split("=");
+    
+    return cookie[1];
 }
 
-function deleteItem(index) {
-  itens.splice(index, 1)
-  setItensBD()
-  loadItens()
+function getCookie2(){
+var nameEQ = "contraste=";
+var ca = document.cookie.split(';');//armazena na variável ca um vetor ou matriz contendo a string do cookie, ignorando o ponto-e-virgula. A saída (eu acho) seria mais ou menos isso: ca = ["contraste=contraste", expires="valor que corresponda à data e tempo que o cookie expira", path=/]
+for (var i = 0; i < ca.length; i++) {
+var c = ca[i]; //cria um loop na matriz ca (i = 0; i <ca.length; i ++) e lê cada valor c = ca [i]).
+while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
 }
-
-function insertItem(item, index) {
-  let tr = document.createElement('tr')
-
-  tr.innerHTML = `
-    <td>${item.id}</td>
-    <td>${item.nome}</td>
-    <td>${item.email}</td>
-    <td>${item.celular}</td>
-    <td class="acao">
-      <button onclick="editItem(${index})"><i class='bx bx-edit'></i></button>
-    </td>
-    <td class="acao">
-      <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
-    </td>
-  `
-  tbody.appendChild(tr)
-}
-
-btnSalvar.onclick = e => {
-  
-  if (sId.value == '' || sNome.value == '' || sEmail.value == '' || sCelular.value == '') {
-    return
-  }
-
-  e.preventDefault();
-
-  if (id !== undefined) {
-    itens[id].id = sId.value
-    itens[id].nome = sNome.value
-    itens[id].email = sEmail.value
-    itens[id].celular = sCelular.value
-  } else {
-    itens.push({'id': sId.value,'nome': sNome.value, 'email': sEmail.value, 'celular': sCelular.value})
-  }
-
-  setItensBD()
-
-  modal.classList.remove('active')
-  loadItens()
-  id = undefined
-}
-
-function loadItens() {
-  itens = getItensBD()
-  tbody.innerHTML = ''
-  itens.forEach((item, index) => {
-    insertItem(item, index)
-  })
+return undefined;
 
 }
-
-const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? []
-const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens))
-
-loadItens()
