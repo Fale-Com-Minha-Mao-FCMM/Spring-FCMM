@@ -31,8 +31,8 @@ html {
 
 body {
   font-size: 14px;
-  color: #000;
-  background-color: #FFF;
+  color: white;
+  background-color: black;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
@@ -40,7 +40,7 @@ body {
 
 h2.titulo {
   text-align: center;
-  color: #003087;
+  color: white;
   font-size: 30px;
 }
 
@@ -85,6 +85,8 @@ iframe {
   border: none;
   font-size: 16px;
   margin-top: 55px;
+  background-color: yellow;
+  color: black;
 }
 
 .btnEnviar {
@@ -99,8 +101,8 @@ iframe {
   border-radius: 16px;
   justify-content: center;
   align-items: center;
-  background: #003087;
-  color: #fff;
+  background: yellow;
+  color: black;
   top: 24px;
   margin-bottom: 24px;
   text-decoration: none;
@@ -192,12 +194,12 @@ iframe {
 /* navbar */
 
 #logo a:hover {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
 .nav-list a {
-  color: yellow;
+  color: white;
   text-decoration: none;
   transition: 0.3s;
   font-weight: 600;
@@ -287,18 +289,23 @@ iframe {
 
 #home-content h1 {
   font-size: 6vw;
-  color: yellow;
-}
 
+}
+#home-content h2 {
+  font-size: 4vw;
+
+}
 #home-content h3 {
   font-size: 3vw;
-  color: yellow;
+  color: white;
 }
-
+#home-content h4 {
+  font-size: 3vw;
+  color: white;
+}
 #home-content p {
   text-align: center;
   font-size: 2vw;
-  color: yellow;
 }
 
 #home-content section {
@@ -307,6 +314,7 @@ iframe {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: black;
 }
 
 #home-content section:first-of-type {
@@ -390,7 +398,7 @@ iframe {
   margin-top: 30px;
   padding-bottom: 30px;
   font-size: 20px;
-  color:#003087 
+  color:yellow; 
 }
 
 
@@ -661,11 +669,11 @@ nav.main-menu li.active>a,
 
 .card_content {
   padding: 1rem;
-  background: #fff;
+  background: black;
 }
 
 .card_title {
-  color: #0d47a1;
+  color: yellow;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -674,7 +682,7 @@ nav.main-menu li.active>a,
 }
 
 .card_text {
-  color: #0d47a1;
+  color: white;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
@@ -688,17 +696,20 @@ footer {
   width: 100vw;
   text-align: center;
   align-items: center;
-  background-color: #003087;
+  background-color: black;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
   z-index: 1;
   margin-top: 90px;
 
 }
  
+footer h1 {
+  color: yellow;
+}
+
 .socials {
   list-style: none;
   display: flex;
@@ -713,7 +724,7 @@ footer {
 
 .socials a {
   text-decoration: none;
-  color: #fff;
+  color: yellow;
   font-size: 16px;
   padding: 5px;
   border-radius: 50%;
@@ -759,7 +770,7 @@ footer {
     right: 0;
     width: 50vw;
     height: 100vh;
-    background: #003087;
+    background: black;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -830,7 +841,6 @@ footer {
   border-radius: 32px;
   flex-direction: column;
   justify-content: center;
-  background-color: var
 }
 
 .Cadastro-Container h1{
@@ -956,7 +966,7 @@ border-color: transparent;
 border-radius: 16px;
 justify-content: center;
 align-items: center;
-background: #003087;
+background: yellow;
 color: #fff;
 top:24px;
 margin-bottom: 24px;
@@ -996,7 +1006,6 @@ cursor: pointer;
   border-radius: 32px;
   flex-direction: column;
   justify-content: center;
-  background-color: var;
 }
 
 .Login-Container h1{
@@ -1039,8 +1048,8 @@ cursor: pointer;
   border-radius: 16px;
   justify-content: center;
   align-items: center;
-  background: #003087;
-  color: #fff;
+  background: yellow;
+  color: black;
   top:24px;
   margin-bottom: 24px;
   cursor: pointer;
@@ -2095,7 +2104,7 @@ nav .sidebar-button i{
 
 .capitulos-details{
   border-radius: 20px;
-  background-color: var(--branco);
+  background-color: black;
   padding-bottom: 1.5rem;
   width: 18rem;
   box-shadow: 0px 0px 32px 0px rgb(0 0 0 / 25%);
@@ -2115,6 +2124,7 @@ nav .sidebar-button i{
 .capitulos-title p:nth-child(1){
   font-size: 1.1rem;
   min-height: 3rem;
+  color: yellow;
 }
 
 .capitulos-title p:nth-child(2){
@@ -2122,9 +2132,9 @@ nav .sidebar-button i{
 }
 .capitulos-title .btn_capitulo{
   text-decoration: none;
-  background-color: #003087;
+  background-color: yellow;
   padding: 0.7rem 3rem;
-  color: #fff;
+  color: black;
   border-radius: 10px;
 }
 
@@ -2149,7 +2159,9 @@ nav .sidebar-button i{
   padding: 0.4rem 6rem;
 
 }
-
+#content{
+  background-color: black;
+}
 /*nav-bar usuario*/
 
 .nav-list-user {
@@ -2312,11 +2324,11 @@ nav .sidebar-button i{
   width: 80%;
   display: flex;
   padding: 32px;
-  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 32px 0px rgb(255, 255, 0);
   border-radius: 32px;
-  background-color: #003087;
+  background-color: black;
   justify-content: space-between;
-  color: #FFF;
+  color: yellow;
 }
 
 .curiosidadeText{
@@ -2330,7 +2342,7 @@ nav .sidebar-button i{
 }
 #curiosidadeTitle{
   font-size: 30px;
-  color:#003087;
+  color:yellow;
   margin-top: 5rem;
   margin-bottom: -2rem;
 }
