@@ -352,6 +352,21 @@ iframe {
   background-position: center;
 }
 
+/* Seta Home */
+#idSeta{
+  font-size: 45px;
+  color: white;
+  margin-top: 100px;
+  animation:anima-seta 2500ms ease infinite;
+  opacity: 10%;
+  margin-left: 130vh;
+}
+@keyframes anima-seta {
+  to {
+      opacity:1;
+      transform: translateY(18px);
+  }
+}
 
 /*=== PÁGINA DE ACESSIBILIDADE ===*/
 
