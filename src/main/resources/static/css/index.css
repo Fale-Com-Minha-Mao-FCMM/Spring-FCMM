@@ -141,7 +141,7 @@ iframe {
 
 }
 /*botões de contraste*/
-#semcontraste {
+.semcontraste {
   text-align: center;
   font-size: 9px;
   border-radius: 50%;
@@ -152,7 +152,7 @@ iframe {
   color: #fff;
 }
 
-#contraste {
+.contraste {
   text-align: center;
   font-size: 9px;
   border-radius: 50%;
@@ -359,7 +359,7 @@ iframe {
   margin-top: 100px;
   animation:anima-seta 2500ms ease infinite;
   opacity: 10%;
-  margin-left: 130vh;
+  margin-left: 180vh;
 }
 @keyframes anima-seta {
   to {
