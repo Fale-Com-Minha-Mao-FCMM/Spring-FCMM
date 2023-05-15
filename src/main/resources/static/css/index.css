@@ -299,8 +299,12 @@ iframe {
 
 #home-content h3 {
   font-size: 3vw;
+  color: black;
 }
 
+#home-content h3{
+  color:black
+}
 #home-content p {
   text-align: center;
   font-size: 2vw;
@@ -748,11 +752,6 @@ footer {
 .socials a:hover i {
   color: aqua;
 }
-
-#git-icon {
-  width: 100%;
-}
-
 
 /* responsividade */
 .mobile-menu {
