@@ -1,7 +1,7 @@
 # Fala com Minha Mão
 
-### Fatec ZL - Centro Paula Souza
-##### Disciplina - Programação Web III
+## Fatec ZL - Centro Paula Souza
+#### Disciplina - Programação Web III
 
 Grupo FCMMM - Fale com as Minhas Mãos
 - Gabriel da Silva Oliveira dos Santos
