@@ -3,7 +3,7 @@
 ## Fatec ZL - Centro Paula Souza
 #### Disciplina - Programação Web III
 
-Grupo FCMMM - Fale com as Minhas Mãos
+Grupo FCMMM - Fala com Minhas Mãos
 - Gabriel da Silva Oliveira dos Santos
 - Giovanna Passos Figueira da Silva
 - Karoline de Souza da Silva
