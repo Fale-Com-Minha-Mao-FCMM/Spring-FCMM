@@ -32,38 +32,33 @@ public class GUIAdminController {
     //     return new ModelAndView("homeUsuario");
     // }
 
-    @GetMapping("/crud")
-    public ModelAndView formCrud() {
-        return new ModelAndView("crudAdminHome");
-    }
-
-    @GetMapping("/crudAdministradores")
-    public ModelAndView showAdmin(){
-        ModelAndView mv = new ModelAndView("crudAdmin");
-        // mv.addObject("");
-        return mv;
-    }
-
-
-
-    @GetMapping("/crudAluno")
-    public ModelAndView showUser(){
-     ModelAndView modelAndView = new ModelAndView("crudAdminAluno");
-         modelAndView.addObject("usuarios", service.consultaTodos());
-
-         return modelAndView;
-     }
-    // @GetMapping("/crudAluno")
-    // public ModelAndView formCrudAluno() {
-    //     return new ModelAndView("crudAdminAluno");
+    // @GetMapping("/crud")
+    // public ModelAndView formCrud() {
+    //     return new ModelAndView("crudAdminHome");
     // }
 
-    @GetMapping("/crudCapitulos")
-    public ModelAndView formCrudCapitulos() {
-        return new ModelAndView("crudAdminCapitulos");
-    }
+    // @GetMapping("/crudAdmin")
+    // public ModelAndView showAdmin(){
+    //     ModelAndView mv = new ModelAndView("crudAdmin");
+    //     return mv;
+    // }
 
-    // Requisição GET que vai mostrar a págida de criação de aluno.
+    // @GetMapping("/crudAluno")
+    // public ModelAndView showUser(){
+    //  ModelAndView modelAndView = new ModelAndView("crudAdminAluno");
+    //      modelAndView.addObject("usuarios", service.consultaTodos());
+
+    //      return modelAndView;
+    //  }
+
+    // @GetMapping("/crudCapitulos")
+    // public ModelAndView formCrudCapitulos() {
+    //     return new ModelAndView("crudAdminCapitulos");
+    // }
+
+    //-----CRIAR USUARIO-----\\
+
+    // Requisição GET 
     @GetMapping("/criar-usuario-admin")
     public ModelAndView getUsuariosAdmin(Usuario usuario) {
         ModelAndView mv = new ModelAndView("cadastrarUsuario");
@@ -72,7 +67,7 @@ public class GUIAdminController {
         return mv;
     }
 
-    // Requisição POST que irá criar o usuário!
+    // Requisição POST 
     @PostMapping("/criar-usuario-admin")
     public RedirectView createUsuario(@Valid Usuario usuario, BindingResult result) {
         if (result.hasErrors()) {
@@ -87,7 +82,9 @@ public class GUIAdminController {
         return new RedirectView("/crudAluno");
     }
 
-    // Requisição GET que irá mostrar a página de atualização de cliente
+    //----ATUALIZAR USUARIO-----\\
+
+    // Requisição GET 
     @GetMapping("/atualizar-usuario-admin/{id}")
     public ModelAndView getUsuarioAdmin(@PathVariable("id") long id) {
         ModelAndView mv = new ModelAndView("atualizarUsuario");
@@ -96,7 +93,7 @@ public class GUIAdminController {
         return mv;
     }
 
-    // Requisição POST que irá atualizar um cliente
+    // Requisição POST
     @PostMapping("/atualizar-usuario-admin/{id}")
     public RedirectView setUsuarioAdmin(@PathVariable("id") long id, @Valid Usuario usuario, BindingResult result) {
         if (result.hasErrors()) {
@@ -109,7 +106,9 @@ public class GUIAdminController {
         return new RedirectView("/crudAluno");
     }
 
-    // Requisição GET que irá mostrar a página de excluir cliente
+    //-----EXCLUIR USUARIO-----\\
+
+    // Requisição GET 
     @GetMapping("/deletar-usuario-admin/{id}")
     public RedirectView deletarUsuario(@PathVariable("id") Long id) {
         service.delete(id);

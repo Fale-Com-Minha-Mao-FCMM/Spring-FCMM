@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="overflow-x:hidden;">
+<!--Testando commit-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cap1</title>
+  <link rel="manifest" href="/web/manifest.json">
+  <link rel="stylesheet" th:href="@{css/index.css}" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="../static/validarCadastro.js"></script>
+    <script src="../js/contraste.js"></script> -->
+</head>
+<body>
+    <header th:insert="~{fragments/headerUsuario}"></header>
+
+    <article>
+        <section>
+          <center><p>
+            Atenção, esse material não é oficial da FCMM, é apenas um material para apresentar a ideía do projeto.
+          </p></center>
+          <h2 class="titulo">Alfabeto</h2>
+          <img class="imagem" src="https://www.lojaapoio.com.br/lojas/00045394/prod/carimboAlfabetoLibras.JPG"
+            alt="alfabeto em libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/EZxkymw426U"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </section>
+    
+        <section>
+          <h2 class="titulo">Pronomes</h2>
+          <img class="imagem"
+            src="../img/capitulo1/pronomes.png" alt="Pronomes pessoais em libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/5FHqai1wT-o"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </section>
+    
+        <section>
+          <h2 class="titulo">Cumprimentos</h2>
+          <img class="imagem"
+            src="https://1.bp.blogspot.com/-M5-loMCQf0M/WFCGajCY4rI/AAAAAAAAHI0/4-ZPCpmJ6zsevXDf-BZtifaeJMvNlDQHACLcB/s1600/cumprimentos.png"
+            alt="Cumprimentos em Libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/ckvOUO4044g"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </section>
+    
+        <section>
+          <h2 class="titulo">Numerais</h2>
+          <img class="imagem" src="https://conexaoeducacional.com.br/wp-content/uploads/2021/03/imagem-11.jpg"
+            alt="Numerais em Libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/CKmN_I05qYk"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </section>
+    
+        <section>
+          <h2 class="titulo">Atividades</h2>
+        </section>
+
+        <a id="new" th:href="@{/quiz1}">Quiz!</a>
+
+</body>

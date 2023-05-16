@@ -32,36 +32,30 @@ public ModelAndView menu() {
 return new ModelAndView("index");
 }
 
-
-// @GetMapping("/criar-usuario")
-// public ModelAndView showIndex(Cadastro cadastro) {
-//     ModelAndView mv = new ModelAndView("cadastroUsuario");
-//     mv.addObject("cadastroUsuario", cadastro);
-//     return mv;
-// }
-// @GetMapping("/admin")
-// public ModelAndView formAdmin() {
-//     return new ModelAndView("crudAdmin");
-// }
-
 @GetMapping("/login")
 public ModelAndView formLogin() {
     return new ModelAndView("login");
 }
 
-// @GetMapping("/crud")
-// public ModelAndView formCrud() {
-//     return new ModelAndView("crudAdmin");
-// }
+@GetMapping("/crud")
+public ModelAndView formCrud() {
+    return new ModelAndView("crudAdminHome");
+}
 
-// @GetMapping("/crudAluno")
-// public ModelAndView formCrudAluno(){
-//     return new ModelAndView("crudAdminAluno");
-// }
-// @GetMapping("/crudCapitulos")
-// public ModelAndView formCrudCapitulos(){
-//     return new ModelAndView("crudAdminCapitulos");
-// }
+@GetMapping("/crudAdministradores")
+    public ModelAndView showAdmin(){
+        ModelAndView mv = new ModelAndView("crudAdmin");
+        return mv;
+    }
+
+@GetMapping("/crudAluno")
+public ModelAndView formCrudAluno(){
+    return new ModelAndView("crudAdminAluno");
+}
+@GetMapping("/crudCapitulos")
+public ModelAndView formCrudCapitulos(){
+    return new ModelAndView("crudAdminCapitulos");
+}
 
 @GetMapping("/home")
 public ModelAndView homeUsuario() {
@@ -90,6 +84,16 @@ public ModelAndView acessibilidade() {
 @GetMapping("/informacoes")
 public ModelAndView InformacoesUsuario() {
     return new ModelAndView("informacoes");
+}
+
+@GetMapping("/cap1")
+public ModelAndView MostraCap1(){
+    return new ModelAndView("capitulos/cap1");
+}
+
+@GetMapping("/quiz1")
+public ModelAndView MostraQuiz1(){
+    return new ModelAndView("quiz/quiz1");
 }
 
 }
