@@ -43,7 +43,8 @@ body {
 h2.titulo {
   text-align: center;
   color: #003087;
-  font-size: 30px;
+  font-size: 40px;
+  padding-top: 3rem;
 }
 
 
@@ -76,6 +77,7 @@ iframe {
   width: 500px;
   margin: 0 auto;
   display: block;
+  
 }
 
 .btn {
@@ -428,6 +430,7 @@ font-size: 16px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .cards_item_sobre {
@@ -1238,13 +1241,15 @@ button {
 }
 
 #new {
-  font-size: 16px;
-  padding: 8px;
+  font-size: 20px;
+  padding: 13px;
   border-radius: 5px;
   border: none;
   color: white;
   background-color: #003087;
   text-decoration: none;
+  margin-left: 65rem;
+  margin-top: 10rem;
 }
 
 .divTable {
@@ -2108,8 +2113,8 @@ nav .sidebar-button i{
 #capitulos{
   display: flex;
   justify-content: space-evenly;
-  margin: 0 auto;
   padding-top: 10%;
+  margin-bottom: 7rem;
 }
 
 .capitulos-details{
@@ -2286,7 +2291,7 @@ nav .sidebar-button i{
   color: #fff;
   z-index: 1;
   margin-top: 82%;
-  bottom: -17em;
+  bottom: -22em;
 }
 
 #footerLogin h3 {
@@ -2352,4 +2357,15 @@ nav .sidebar-button i{
   color:#003087;
   margin-top: 5rem;
   margin-bottom: -2rem;
+}
+
+/*conteúdo do capitulo 1*/
+#alfabeto,#pronomes,#cumprimentos,#numerais{
+  display: flex;
+  align-items: center;
+  width: 95%;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 32px;
+  background-color: white;
+  padding: 3rem;
 }

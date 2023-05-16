@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cap1</title>
+  <title>Capítulo 1</title>
   <link rel="manifest" href="/web/manifest.json">
   <link rel="stylesheet" th:href="@{css/index.css}" />
 
@@ -23,30 +23,41 @@
 
     <article>
         <section>
-          <center><p>
+          <br>
+          <br>
+          <center><h3>
             Atenção, esse material não é oficial da FCMM, é apenas um material para apresentar a ideía do projeto.
-          </p></center>
+          </h3></center>
           <h2 class="titulo">Alfabeto</h2>
+          <div class="felipelindo">
+          <div id="alfabeto">
           <img class="imagem" src="https://www.lojaapoio.com.br/lojas/00045394/prod/carimboAlfabetoLibras.JPG"
             alt="alfabeto em libras">
           <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/EZxkymw426U"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+            </div>
+          </div>
         </section>
-    
+        <br>
         <section>
           <h2 class="titulo">Pronomes</h2>
+          <div class="felipelindo">
+          <div id="pronomes">
           <img class="imagem"
-            src="../img/capitulo1/pronomes.png" alt="Pronomes pessoais em libras">
+            src="https://files.passeidireto.com/888b7764-bc12-49dd-92ca-ce39ac896204/bg1.png" alt="Pronomes pessoais em libras">
           <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/5FHqai1wT-o"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+          </div>
         </section>
-    
+        <br>
         <section>
           <h2 class="titulo">Cumprimentos</h2>
+          <div class="felipelindo">
+          <div id="cumprimentos">
           <img class="imagem"
             src="https://1.bp.blogspot.com/-M5-loMCQf0M/WFCGajCY4rI/AAAAAAAAHI0/4-ZPCpmJ6zsevXDf-BZtifaeJMvNlDQHACLcB/s1600/cumprimentos.png"
             alt="Cumprimentos em Libras">
@@ -54,22 +65,33 @@
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+          </div>
         </section>
-    
+        <br>
         <section>
           <h2 class="titulo">Numerais</h2>
+          <div class="felipelindo">
+          <div id="numerais">
           <img class="imagem" src="https://conexaoeducacional.com.br/wp-content/uploads/2021/03/imagem-11.jpg"
             alt="Numerais em Libras">
           <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/CKmN_I05qYk"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+          </div>
         </section>
-    
-        <section>
-          <h2 class="titulo">Atividades</h2>
-        </section>
-
-        <a id="new" th:href="@{/quiz1}">Quiz!</a>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <a id="new" th:href="@{/quiz1}">Iniciar quiz</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 </body>
+<footer th:insert="~{fragments/footer}"></footer>
+</html>
