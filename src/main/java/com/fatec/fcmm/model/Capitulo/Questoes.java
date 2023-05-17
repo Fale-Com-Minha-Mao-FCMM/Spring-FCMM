@@ -8,5 +8,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Questoes {
+
+    @Id
+    private Long id;
     
 }

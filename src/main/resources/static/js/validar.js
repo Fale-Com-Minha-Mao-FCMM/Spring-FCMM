@@ -4,7 +4,7 @@ console.log("Testando validation")
 
 const validar = new JustValidate('#cadastro-usuario'); 
 
-    //Validação de Email
+    //-----Validação de Email-----\\
     validar.addField( '#inputEmail' , [
         { rule: 'required' , errorMessage: 'O campo e-mail é obrigatório'},
         { rule: 'email' ,  errorMessage: 'E-mail inválido.'}
@@ -12,6 +12,9 @@ const validar = new JustValidate('#cadastro-usuario');
     .addField( ' #inputConfirmaEmail '  , [
         {
             rule: 'required', errorMessage: 'O campo confirma e-mail é obrigatório'
+        },
+        {
+            rule: ' required ', errorMessage: ' Email é inválido. '
         },
         {
             validar: (value, fields) =>{
@@ -24,20 +27,20 @@ const validar = new JustValidate('#cadastro-usuario');
 
                     return value === inputConfirmaEmail;
                 }
-                return true;
+                
             },
             errorMessage: 'Os emails não coencidem.',
         },
     ])
 
-    //Validação de Senha
+    //-----Validação de Senha-----\\
     validar.addField( ' #inputSenha ', [
         { rule: ' required ', errorMessage: ' O campo senha é obrigatório' },
         { rule: 'strongPassword' , value: '8' , errorMessage: ' A senha deve conter no mínimo 8 caracteres '  }
     ])
     .addField( ' #inputConfirmaSenha ' , [
         { 
-            rule: 'required' ,
+            rule: 'required' , errorMessage: ' O campo de confirmação da senha deve ser preenchido. '
         },
         {
             validar: (value, fields) => {
@@ -49,8 +52,7 @@ const validar = new JustValidate('#cadastro-usuario');
                     fields [ ' #inputConfirmaSenha '] .elem.value;
 
                     return value === inputConfirmaEmail
-          a      }
-                return true;
+                }
             },
             errorMessage: 'As senhas não coecidem.'
         }
@@ -59,6 +61,16 @@ const validar = new JustValidate('#cadastro-usuario');
     validar.addField( '#inputNumeroCelular', [
         { rule: ' required ', errorMessage: ' O campo Telefone é obrigatório ' }
     ])
+
+    validar.addField( ' #inputName ', [
+        { rule: 'required', errorMessage: ' O campo Nome é obrigatório ' }
+    ])
+
+    validar.addField( ' #inputSobronome ', [
+        { rule: ' required ', errorMessage: ' O campo Sobrenome é obrigatório ' }
+    ])
+    
+    return true;
 
 // const inputRules= {
 //     inputName: [

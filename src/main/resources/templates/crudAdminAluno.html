@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script th:src="@{/js/adicionarAluno.js}"></script>
     <!-- Icones -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -16,7 +15,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img th:src="@{/img/logo/logo.png}" id="logoNav">
+      <img th:src="@{/img/logo/logo.png}" id="logoNav" alt="Logo">
     </div>
       <ul class="nav-links">
         <li>
@@ -83,8 +82,6 @@ sidebarBtn.onclick = function() {
               <th>Capitulo Atual</th>
               <th>Editar</th>
               <th>Excluir</th>
-              <!-- <th class="acao" th:href="@{/atualizar-usuario-admin/{id}}">Editar</th>
-              <th class="acao" th:href="@{/deletar-usuario-admin/{id}}">Excluir</th> -->
             </tr>
           </thead>
           <tbody>

@@ -42,20 +42,20 @@ public ModelAndView formCrud() {
     return new ModelAndView("crudAdminHome");
 }
 
-@GetMapping("/crudAdministradores")
-    public ModelAndView showAdmin(){
-        ModelAndView mv = new ModelAndView("crudAdmin");
-        return mv;
-    }
+// @GetMapping("/crudAdministradores")
+//     public ModelAndView showAdmin(){
+//         ModelAndView mv = new ModelAndView("crudAdmin");
+//         return mv;
+//     }
 
-@GetMapping("/crudAluno")
-public ModelAndView formCrudAluno(){
-    return new ModelAndView("crudAdminAluno");
-}
-@GetMapping("/crudCapitulos")
-public ModelAndView formCrudCapitulos(){
-    return new ModelAndView("crudAdminCapitulos");
-}
+// @GetMapping("/crudAluno")
+// public ModelAndView formCrudAluno(){
+//     return new ModelAndView("crudAdminAluno");
+// }
+// @GetMapping("/crudCapitulos")
+// public ModelAndView formCrudCapitulos(){
+//     return new ModelAndView("crudAdminCapitulos");
+// }
 
 @GetMapping("/home")
 public ModelAndView homeUsuario() {

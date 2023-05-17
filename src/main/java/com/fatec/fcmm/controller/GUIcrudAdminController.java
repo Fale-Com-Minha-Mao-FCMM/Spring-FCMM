@@ -15,8 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fatec.fcmm.model.Admin.Admin;
 import com.fatec.fcmm.services.MantemAdmin;
 
-import ch.qos.logback.core.model.Model;
-
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
@@ -25,6 +23,13 @@ public class GUIcrudAdminController {
     Logger looger = LogManager.getLogger(GUIcrudAdminController.class);
     @Autowired
     MantemAdmin service;
+
+    @GetMapping("/crudAdministradores")
+    public ModelAndView showAdmin(){
+        ModelAndView mv = new ModelAndView("crudAdmin");
+        mv.addObject("admin",service.consultaTodos());
+        return mv;
+    }
 
      //-----------CRUD ADMIN--------------\\
 
@@ -44,7 +49,7 @@ public class GUIcrudAdminController {
     @PostMapping("/criar-admin")
     public RedirectView createAdmin(@Valid Admin admin, BindingResult result) {
         if (result.hasErrors()) {
-            return new RedirectView("/crudAdmin");
+            return new RedirectView("/crudAdministradores");
         }
 
         if (!service.save(admin).isPresent()) {
@@ -52,7 +57,7 @@ public class GUIcrudAdminController {
             mv.addObject("message", "Dados inválidos");
         }
 
-        return new RedirectView("/crudAdmin");
+        return new RedirectView("/crudAdministradores");
     }
 
 
@@ -77,7 +82,7 @@ public class GUIcrudAdminController {
         }
         service.atualiza(id, admin);
 
-        return new RedirectView("/crudAdmin");
+        return new RedirectView("/crudAdministradores");
     }
 
     //-----DELETAR ADMIN-----\\
@@ -86,7 +91,7 @@ public class GUIcrudAdminController {
     @GetMapping("/deletar-admin/{id}")
     public RedirectView deletarAdmin(@PathVariable("id") Long id) {
         service.delete(id);
-        return new RedirectView("/crudAdmin");
+        return new RedirectView("/crudAdministradores");
     }
 
 }

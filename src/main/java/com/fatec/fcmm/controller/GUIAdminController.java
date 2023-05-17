@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fatec.fcmm.model.Usuario.Usuario;
 import com.fatec.fcmm.services.MantemUsuario;
 
-import ch.qos.logback.core.model.Model;
 
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -37,19 +36,15 @@ public class GUIAdminController {
     //     return new ModelAndView("crudAdminHome");
     // }
 
-    // @GetMapping("/crudAdmin")
-    // public ModelAndView showAdmin(){
-    //     ModelAndView mv = new ModelAndView("crudAdmin");
-    //     return mv;
-    // }
+    
 
-    // @GetMapping("/crudAluno")
-    // public ModelAndView showUser(){
-    //  ModelAndView modelAndView = new ModelAndView("crudAdminAluno");
-    //      modelAndView.addObject("usuarios", service.consultaTodos());
+    @GetMapping("/crudAluno")
+    public ModelAndView showUser(){
+     ModelAndView mv = new ModelAndView("crudAdminAluno");
+         mv.addObject("usuarios", service.consultaTodos());
 
-    //      return modelAndView;
-    //  }
+         return mv;
+     }
 
     // @GetMapping("/crudCapitulos")
     // public ModelAndView formCrudCapitulos() {
