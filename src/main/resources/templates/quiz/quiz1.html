@@ -1,85 +1,101 @@
+<!--<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz1</title>
-  <link rel="manifest" href="/web/manifest.json">
-  <link rel="stylesheet" th:href="@{css/index.css}" />
-  <script th:src="@{/js/quiz.js}"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
 
+  <link rel="stylesheet" th:href="@{css/index.css}">
+</head>
+    <body>
+        <header th:insert="~{fragments/header}"></header>
+<div class="felipelindo">
+    <center><h2 id="contato">Quiz</h2></center>
+    <br>
+    <br>
+    <main class="quiz">
+        <div class="content-quiz">
+            <figure class="imgQuiz">
+                <img src="" width="200px" />
+            </figure>
+            <span class="spnQtd"></span>
+            <span class="question"></span>
+            <div class="answers"></div>
+        </div>
+        <div class="finish-quiz">
+            <span></span>
+            <button class="btnRestart">Reiniciar</button>
+        </div>
+    </main>
+</div>
+<img src="../../static/img/quiz/1.png" alt="" srcset="">
+  
+  <script th:src="@{/js/scriptcap1.js}" type="module"></script>
+    </body>
+    <footer th:insert="~{fragments/footer}"></footer>
+</html>
+-->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- <script src="../static/validarCadastro.js"></script>
-    <script src="../js/contraste.js"></script> -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maia Quiz</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" th:href="@{/css/quiz.css}" />
 </head>
 <body>
-    <main>
-        <div id="progress_bar"></div>
-        <form className="questions_box">
-            <div id="question-1">
-                <h2>Questão 1</h2>
-                <h3>Você se preocupa em se tornar uma vítima de fraude?</h3>
-                <input type="radio" id="question-1-answer-a" name="favelang" value={1} /> O que é Fraude?<br></br>
-                <input type="radio" id="question-1-answer-b" name="favelang" value={2} /> Nunca me preocupo<br></br>
-                <input type="radio" id="question-1-answer-c" name="favelang" value={3} /> Sim, eu me preocupo muito com isso!<br></br>
-                <div id="submit1" className="button">Enviar Resposta</div>
-                <div className="clearfix"></div>
-            </div>
+    <header th:insert="~{fragments/header}"></header>
+    <main class="tela-principal">
+
+        <section class='conteudos'>
+
+            <h1>Quiz</h1>
+
+            <article class='centro' id='instrucoes'>
+                Leia a questão com atenção a assinale a alternativa correta.
+            </article>
+
+            <article class='questoes'>
+                
+                <figure class='imagemDaQuestao'>
+                    <img src="" alt="Img da questao" width="200px"/>
+                </figure>   
+
+                <header class='questao'>
+                    <span id='numQuestao'></span>
+                    <h2 id='pergunta'></h2>
+                </header>
+                                
+                <div class='corpo'>
+                    <ol type='A' id='alternativas'>
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                    </ol>
+                </div>
+            </article>
+            
+            <article id='aviso' class='centro'>
+                <input type="range" value='1' min='1' max='10' step='1'
+                name="progresso" id="progresso" disabled
+                /> <br>
+                <span id='numero'></span> de <span id='total'></span>
+            </article>
         
-            <div id="question-2">
-                <h2>Questão 2</h2>
-                <h3>Você utiliza a mesma senha para tudo?</h3>
-                <input type="radio" id="question-2-answer-a" name="favelang" value={1} /> Sim!<br></br>
-                <input type="radio" id="question-2-answer-b" name="favelang" value={2} /> Só para as senhas de cartão de crédito<br></br>
-                <input type="radio" id="question-2-answer-c" name="favelang" value={3} /> Não, todas são diferentes!<br></br>
-                <div id="submit2" className="button">Enviar Resposta</div>
-                <div className="clearfix"></div>
-            </div>
-        
-            <div id="question-3">
-                <h2>Questão 3</h2>
-                <h3>Você confia em um e-mail enviado pelas suas costas pedindo sua senha?</h3>
-                <input type="radio" id="question-3-answer-a" name="favelang" value={1} /> Sim, é o banco afinal<br></br>
-                <input type="radio" id="question-3-answer-b" name="favelang" value={2} /> Se parece oficial, sim<br></br>
-                <input type="radio" id="question-3-answer-c" name="favelang" value={3} /> De jeito nenhum, um banco nunca pedirá a senha de sua conta<br></br>
-                <div id="submit3" className="button">Enviar Resposta</div>
-                <div className="clearfix"></div>
-            </div>
-        
-        
-            <div id="question-4">
-                <h2>Questão 4</h2>
-                <h3>Você costuma usar cartão de crédito virtual em compras online?</h3>
-                <input type="radio" id="question-4-answer-a" name="favelang" value={1} /> Não<br></br>
-                <input type="radio" id="question-4-answer-b" name="favelang" value={2} /> Raramente uso<br></br>
-                <input type="radio" id="question-4-answer-c" name="favelang" value={3} /> Sim, com certeza!<br></br>
-                <div id="submit4" className="button">Enviar Resposta</div>
-                <div className="clearfix"></div>
-            </div>
-        
-            <div id="question-5">
-                <h2>Questão 5</h2>
-                <h3>Você compartilha seu PIN com alguém?</h3>
-                <input type="radio" id="question-5-answer-a" name="favelang" value={1} /> Sim, qualquer um que pedir por isso<br></br>
-                <input type="radio" id="question-5-answer-b" name="favelang" value={2} /> Na verdade não, mas às vezes eu deixo meu(minha) parceiro(a) sacar dinheiro para mim<br></br>
-                <input type="radio" id="question-5-answer-c" name="favelang" value={3} /> Nunca!<br></br>
-                <div id="submit5" className="button">Enviar Resposta</div>
-                <div className="clearfix"></div>
-            </div>
-        
-            <div id="question-6">
-                <h2>Obrigado por responder a pesquisa!</h2>
-                <h3>Seu score de segurança é: </h3>
-                <h1 id="printtotalscore"></h1>
-                <p id="printscoreinfo"></p>
-            </div>
-        </form>
+            <footer id='autoria' class='centro'>Desenvolvido por Edson Maia &copy; 2021</footer>
+
+        </section>
+
     </main>
+
+<!-- JS externo -->
+<script th:src="@{js/scriptcap1.js}"></script>
+
 </body>
-<footer th:insert="~{fragments/footer}">
-    <script th:src="@{/js/quiz.js}"></script>
-</footer>
+<footer th:insert="~{fragments/footer}"></footer>
+</html>

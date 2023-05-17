@@ -388,6 +388,10 @@ font-size: 16px;
 
 /* Fale conosco */
 
+#contato{
+  color: #003087;
+}
+
 #section-fale-conosco {
   margin-top: 40px;
   padding-bottom: 40px;
@@ -1001,6 +1005,7 @@ cursor: pointer;
   align-items: center;
   height: 100%;
   padding: 5rem 0 5rem 0;
+  flex-direction: column;
 }
 
 
@@ -2369,3 +2374,72 @@ nav .sidebar-button i{
   background-color: white;
   padding: 3rem;
 }
+
+/*QUIZ*/
+
+/*
+
+.spnQtd {
+  text-align: end;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.quiz {
+  background-color: white;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25) ;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-quiz {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.btnRestart {
+  width: 100%;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #008CCC;
+  color: black;
+}
+
+.finish-quiz {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finish-quiz btn-quiz {
+  text-align: center;
+}
+
+#contato{
+  color: #003087;
+}
+
+button.answer{
+  color: white;
+  background-color: #003087;
+  padding: 2px;
+  width: 100%;
+  border-radius: 10px;
+  border-color: transparent;
+}
+*/
