@@ -1,51 +1,12 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-
-  <link rel="stylesheet" th:href="@{css/index.css}">
-</head>
-    <body>
-        <header th:insert="~{fragments/header}"></header>
-<div class="felipelindo">
-    <center><h2 id="contato">Quiz</h2></center>
-    <br>
-    <br>
-    <main class="quiz">
-        <div class="content-quiz">
-            <figure class="imgQuiz">
-                <img src="" width="200px" />
-            </figure>
-            <span class="spnQtd"></span>
-            <span class="question"></span>
-            <div class="answers"></div>
-        </div>
-        <div class="finish-quiz">
-            <span></span>
-            <button class="btnRestart">Reiniciar</button>
-        </div>
-    </main>
-</div>
-<img src="../../static/img/quiz/1.png" alt="" srcset="">
-  
-  <script th:src="@{/js/scriptcap1.js}" type="module"></script>
-    </body>
-    <footer th:insert="~{fragments/footer}"></footer>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maia Quiz</title>
+    <title>Quiz</title>
     <!-- CSS externo -->
-    <link rel="stylesheet" th:href="@{/css/quiz.css}" />
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
 </head>
 <body>
     <header th:insert="~{fragments/header}"></header>
@@ -59,9 +20,11 @@
                 Leia a questão com atenção a assinale a alternativa correta.
             </article>
 
+            <br>
+
             <article class='questoes'>
                 
-                <figure class='imagemDaQuestao'>
+                <figure class='imagemDoQuiz'>
                     <img src="" alt="Img da questao" width="200px"/>
                 </figure>   
 
@@ -79,6 +42,8 @@
                     </ol>
                 </div>
             </article>
+
+            <br>
             
             <article id='aviso' class='centro'>
                 <input type="range" value='1' min='1' max='10' step='1'
@@ -86,16 +51,18 @@
                 /> <br>
                 <span id='numero'></span> de <span id='total'></span>
             </article>
-        
-            <footer id='autoria' class='centro'>Desenvolvido por Edson Maia &copy; 2021</footer>
+            <br>
+            <br>
+            <br>
+            <br>
+            <footer th:insert="~{fragments/footer}"></footer>
 
         </section>
 
     </main>
 
 <!-- JS externo -->
-<script th:src="@{js/scriptcap1.js}"></script>
+<script th:src="@{js/quiz1.js}"></script>
 
 </body>
-<footer th:insert="~{fragments/footer}"></footer>
 </html>

@@ -50,7 +50,7 @@ h2.titulo {
 
 main {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 article {
@@ -2373,9 +2373,159 @@ nav .sidebar-button i{
   border-radius: 32px;
   background-color: white;
   padding: 3rem;
+  gap: 5rem;
 }
 
 /*QUIZ*/
+section {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 2.5rem 0 0 0;
+  color: #003087;
+}
+
+/* div class questao com numero da questao e pergunta */
+.questao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+#numQuestao {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: var(--principal);
+  color: #fff;
+  padding: 6px 10px 4px 8px;
+  border-radius: 50%;
+}
+
+#pergunta {
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.imagemDoQuiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* article que acomoda a questao completa */
+.questoes {
+  user-select: none;
+  background: #fff;
+
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25) ;
+  border-color: transparent;
+  border-radius: 32px;
+  margin-bottom: 0.625rem;
+}
+
+.questoes ol li {
+  border: 1px solid var(--principal);
+  display: block;
+  margin-bottom: 0.625rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.questoes ol li:hover {
+  background: var(--principal);
+  cursor: pointer;
+}
+
+.bloqueado {
+  display: none;
+}
+
+.bloqueado li:hover {
+  display: none;
+}
+
+#instrucoes {
+  font-size: 1rem;
+  color: #191919;
+  padding: 0.625rem;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+}
+
+#aviso {
+  color: var(--principal);
+}
+
+#autoria {
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+}
+
+/* ANIMACAO */
+
+/* Animar o input */
+@keyframes piscar {
+  0% {
+      filter: drop-shadow(0 0 15px var(--principal));
+      -webkit-filter: drop-shadow(0 0 15px var(--principal));
+      -moz-filter: drop-shadow(0 0 15px var(--principal));
+      -o-filter: drop-shadow(0 0 15px var(--principal));
+      -ms-filter: drop-shadow(0 0 15px var(--principal));
+  }
+  100% {
+  }
+}
+
+.animar {
+  animation: piscar .75s infinite alternate;
+}
+
+.aparecer {
+  animation: aparecer .5s infinite alternate;
+}
+
+@keyframes aparecer {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.acertou {
+  background: var(--verde);
+  animation: aparecer 0.3s infinite alternate;
+}
+
+.errou {
+  background: var(--vermelho);
+  animation: aparecer 0.3s infinite alternate;
+}
+
+.placar {
+  padding: 1rem;
+  border-radius: 8px;
+  background:#0d47a1;
+  font-size: 2rem;
+}
 
 /*
 

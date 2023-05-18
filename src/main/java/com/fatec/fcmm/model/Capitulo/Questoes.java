@@ -6,15 +6,15 @@
 //import jakarta.persistence.GenerationType;
 //import jakarta.persistence.Id;
 
-<<<<<<< HEAD
-@Entity
-public class Questoes {
-
-    @Id
-    private Long id;
-=======
+//<<<<<<< HEAD
 //@Entity
 //public class Questoes {
->>>>>>> f9cd6edc6d7f7e5579f3fe184dc2fcec285ee56d
+
+//    @Id
+//    private Long id;
+//=======
+//@Entity
+//public class Questoes {
+//>>>>>>> f9cd6edc6d7f7e5579f3fe184dc2fcec285ee56d
     
 //}

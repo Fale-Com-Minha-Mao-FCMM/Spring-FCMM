@@ -78,7 +78,7 @@ let placar = 0 // placar
 
 // PERGUNTA
 let numQuestao = document.querySelector('#numQuestao')
-let imgQuestao = document.querySelector('.imagemDaQuestao img')  // ADICIONE
+let imgQuestao = document.querySelector('.imagemDoQuiz img')  // ADICIONE
 let pergunta   = document.querySelector('#pergunta')
 
 // ALTERNATIVAS
