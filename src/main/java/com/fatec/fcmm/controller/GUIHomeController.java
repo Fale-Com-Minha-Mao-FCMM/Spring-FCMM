@@ -91,6 +91,16 @@ public ModelAndView MostraCap1(){
     return new ModelAndView("capitulos/cap1");
 }
 
+@GetMapping("/cap2")
+public ModelAndView MostraCap2(){
+    return new ModelAndView("capitulos/cap2");
+}
+
+@GetMapping("/cap3")
+public ModelAndView MostraCap3(){
+    return new ModelAndView("capitulos/cap3");
+}
+
 @GetMapping("/quiz1")
 public ModelAndView MostraQuiz1(){
     return new ModelAndView("quiz/quiz1");

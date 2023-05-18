@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="overflow-x:hidden;">
+<!--Testando commit-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo 2</title>
+  <link rel="manifest" href="/web/manifest.json">
+  <link rel="stylesheet" th:href="@{css/index.css}" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="../static/validarCadastro.js"></script>
+    <script src="../js/contraste.js"></script> -->
+</head>
+<body>
+    <header th:insert="~{fragments/headerUsuario}"></header>
+
+    <article>
+        <section>
+          <br>
+          <br>
+          <center><h3>
+            Atenção, esse material não é oficial da FCMM, é apenas um material para apresentar a ideía do projeto.
+          </h3></center>
+          <h2 class="titulo">Dias de semana</h2>
+          <div class="felipelindo">
+          <div id="alfabeto">
+          <img class="imagem" src="https://i.pinimg.com/564x/6d/34/b8/6d34b8eb42176261b42379511957ac6e.jpg"
+            alt="Dias da semana em libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/WsN7p_drADc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section>
+          <h2 class="titulo">Meses do ano</h2>
+          <div class="felipelindo">
+          <div id="pronomes">
+          <img class="imagem"
+            src="https://i.pinimg.com/564x/db/f9/e7/dbf9e7598cd5c7e4bdfd3d073728c44a.jpg" alt="Meses do ano em libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/ZG6BKjygNTI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+        </section>
+        <br>
+        <section>
+          <h2 class="titulo">Tempo</h2>
+          <div class="felipelindo">
+          <div id="cumprimentos">
+          <img class="imagem"
+            src="https://conexaoeducacional.com.br/wp-content/uploads/2021/04/6-saudacoes-2.jpg"
+            alt="Tempos em Libras">
+          <iframe class="videos" width="560" height="315" src="//www.youtube.com/embed/gb01Bp71cmA"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+        </section>
+        <br>
+        <section>
+          <h2 class="titulo">Expressões</h2>
+          <div class="felipelindo">
+          <div id="numerais">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/bwzXvXGrLIE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a id="new" th:href="@{/quiz1}">Iniciar quiz</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</body>
+<footer th:insert="~{fragments/footer}"></footer>
+</html>

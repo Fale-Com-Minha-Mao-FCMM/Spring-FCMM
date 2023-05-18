@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="overflow-x:hidden;">
+<!--Testando commit-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo 3</title>
+  <link rel="manifest" href="/web/manifest.json">
+  <link rel="stylesheet" th:href="@{css/index.css}" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <script src="http://kit.fontawsome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="../static/validarCadastro.js"></script>
+    <script src="../js/contraste.js"></script> -->
+</head>
+<body>
+    <header th:insert="~{fragments/headerUsuario}"></header>
+
+    <article>
+        <section>
+          <br>
+          <br>
+          <center><h3>
+            Atenção, esse material não é oficial da FCMM, é apenas um material para apresentar a ideía do projeto.
+          </h3></center>
+          <h2 class="titulo">Gramática</h2>
+          <div class="felipelindo">
+          <div id="alfabeto">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/lkZoPHiB5VY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section>
+          <h2 class="titulo">Família</h2>
+          <div class="felipelindo">
+          <div id="pronomes">
+          <img class="imagem"
+            src="https://i.pinimg.com/564x/91/02/2b/91022be0af473ccb37e3be493de39a4e.jpg" alt="Família em libras">
+          <iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/b6pmLU9mJTM"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a id="new" th:href="@{/quiz1}">Iniciar quiz</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</body>
+<footer th:insert="~{fragments/footer}"></footer>
+</html>
