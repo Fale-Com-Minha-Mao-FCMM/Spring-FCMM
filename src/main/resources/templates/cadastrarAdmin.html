@@ -6,14 +6,14 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" th:href="@{css/index.css}" media="screen" />
             <script src="../static/validarCadastro.js"></script>
-            <title>Cadastro</title>
+            <title>Cadastro de Admin</title>
         </head>
         <body>
             <header th:insert="~{fragments/header}"></header>
             <div id="content">
             <div class="felipelindo">
             <div class="Cadastro-Container">
-                <h1>Cadatrar Administrado</h1>
+                <h1>Cadatrar Administrador</h1>
                 <form action="#" th:action="@{/criar-admin}" th:object="${admin}" method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>

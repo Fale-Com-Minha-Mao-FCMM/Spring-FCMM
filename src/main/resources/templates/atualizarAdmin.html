@@ -6,14 +6,14 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" media="screen" />
             <script src="/js/validarCadastro.js"></script>
-            <title>Atualizar</title>
+            <title>Atualizar Administradores</title>
         </head>
         <body>
             <header th:insert="~{fragments/header}"></header>
             <div id="content">
             <div class="felipelindo">
             <div class="Cadastro-Container">
-                <h1>Atualizar Admin</h1>
+                <h1>Atualizar Administradores</h1>
                 <form action="#" th:action="@{/atualizar-admin/{id} (id = ${admin.id})}" th:object="${admin}"  method="POST">
                     <div>
                         <h2>Detalhes da Conta</h2>

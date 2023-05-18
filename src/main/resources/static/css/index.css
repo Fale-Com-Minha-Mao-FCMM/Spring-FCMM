@@ -1237,7 +1237,7 @@ button {
 .crudContainer .headerCrud span {
   font-weight: 900;
   font-size: 20px;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 #new {
@@ -1248,8 +1248,8 @@ button {
   color: white;
   background-color: #003087;
   text-decoration: none;
-  margin-left: 65rem;
-  margin-top: 10rem;
+  /* margin-left: 65rem; */
+  /*margin-top: 10rem;*/
 }
 
 .divTable {
