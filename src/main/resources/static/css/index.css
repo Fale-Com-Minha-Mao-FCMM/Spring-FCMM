@@ -240,6 +240,7 @@ article {
 
 #home-content h1 {
   font-size: 6vw;
+  color: white;
 }
 
 #home-content h3 {
@@ -431,17 +432,24 @@ font-size: 16px;
   display: flex;
   list-style: none;
   margin-top: -5rem;
-  padding: 0;
+  padding: 1rem;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 5rem;
+  gap: 3rem;
 }
 
 .cards_item_sobre {
   display: flex;
   padding: 1rem;
   margin-top: 91px;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  justify-content: space-evenly;
+  column-gap: 24px;
+  width: 20rem;
+  font-size: 16px;
 }
 
 .card-image-sobre-nos img {
@@ -758,7 +766,7 @@ cursor: pointer;
   color: #fff;
   z-index: 1;
   margin-top: 82%;
-  bottom: -22em;
+  bottom: -6em;
 }
 
 #footerLogin h3 {
