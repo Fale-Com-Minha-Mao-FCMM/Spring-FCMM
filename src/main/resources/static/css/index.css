@@ -52,6 +52,31 @@ body {
   text-align: center;
 }
 
+/*barra de rolagem da pagina*/
+::-webkit-scrollbar{
+  width: 8px;
+  border-radius: 5%;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #9e9ea0;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #003087;
+}
+
+@keyframes entering{
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*=== INÍCIO BARRA DE ACESSIBILIDADE ====*/
 
 
@@ -335,6 +360,11 @@ article {
       opacity:1;
       transform: translateY(18px);
   }
+}
+
+/*=== FIM HOME ===*/
+@media (max-width: 900px) {
+
 }
 
 /*=== INÍCIO PÁGINA DE ACESSIBILIDADE ===*/
