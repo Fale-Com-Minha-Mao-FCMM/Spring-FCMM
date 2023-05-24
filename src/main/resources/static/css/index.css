@@ -123,6 +123,14 @@ body {
   width: 16px;
 }
 
+/* Responsividade - Media Query*/
+@media (max-width: 768px) {
+  /*barra de acessibilidade some em dispositivos móveis*/
+  .acessibilidade, .acessibilidade a, #label-1, .semcontraste, .contraste, #increase-font, #decrease-font {
+    display: none;
+  }
+}
+
 /*=== FIM DA BARRA DE ACESSIBILIDADE ====*/
 
 /*=== INÍCIO MENU ====*/
