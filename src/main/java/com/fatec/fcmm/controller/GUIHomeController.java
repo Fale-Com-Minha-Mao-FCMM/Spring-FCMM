@@ -37,10 +37,10 @@ public ModelAndView formLogin() {
     return new ModelAndView("login");
 }
 
-@GetMapping("/crud")
-public ModelAndView formCrud() {
-    return new ModelAndView("crudAdminHome");
-}
+//@GetMapping("/crud")
+//public ModelAndView formCrud() {
+//    return new ModelAndView("crudAdminHome");
+//}
 
 // @GetMapping("/crudAdministradores")
 //     public ModelAndView showAdmin(){
@@ -61,6 +61,11 @@ public ModelAndView formCrud() {
 public ModelAndView homeUsuario() {
     return new ModelAndView("homeUsuario");
 }
+
+@GetMapping("/crudEstatisticas")
+    public ModelAndView CrudEstatisticas() {
+    return new ModelAndView("crudAdminEstatisticas");
+    }
 
 @GetMapping("/capitulos")
 public ModelAndView capitulos() {
