@@ -51,10 +51,6 @@ body {
   .felipelindo {
     padding: 3rem 0 3rem 0;
   }
-
-  .contato{
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 425px) {
@@ -66,10 +62,6 @@ body {
 @media (max-width: 320px) {
   .felipelindo {
     padding: 0;
-  }
-
-  .contato{
-    font-size: 16px;
   }
 }
 
@@ -312,7 +304,7 @@ article {
 }
 #home-content p {
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.2rem;
 }
 
 #home-content section {
@@ -388,6 +380,12 @@ article {
   }
 }
 
+@media (max-width: 320px) {
+  #home-content p {
+    font-size: 0.6rem;
+  }
+}
+
 @media (max-width: 375px) {
 
   #home-content section:nth-child(1), #home-content section:nth-child(3), #home-content section:nth-child(5), #home-content section {
@@ -396,11 +394,7 @@ article {
 }
 
   #idSeta{
-    font-size: 32px;
-    color: white;
-    margin-top: 50px;
-    animation:anima-seta 2500ms ease infinite;
-    opacity: 10%;
+    display:none
   }
 
 }
@@ -411,6 +405,10 @@ article {
     height: 420px;
     width: 100%;
 }
+
+  #home-content p {
+    font-size: 0.8rem;
+  }
 
   #idSeta{
     font-size: 32px;
@@ -498,13 +496,13 @@ font-size: 16px;
   }
 }
 
-@media (max-width: 375px) {
-  
+@media (max-width:420px) {
   .contato{
     font-size: 16px;
   }
-
 }
+
+
 /*=== FIM FALE CONOSCO ===*/
 
 /*=== INÍCIO SOBRE NÓS ===*/
@@ -578,6 +576,58 @@ font-size: 16px;
 .card_content a img {
   width: auto;
 }
+
+@media (max-width: 768px) {
+  .curiosidade{
+    flex-direction: column;
+  }
+
+  .curiosidadeText{
+    margin-right: 0;
+  }
+  #curiosidadeImg{
+    margin-left: 42px;
+  }
+}
+
+@media (max-width: 426px) {
+  .curiosidade{
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .curiosidadeText{
+    margin-right: 0;
+    margin-bottom: -2rem;
+  }
+  #curiosidadeImg{
+    width: 100%;
+    margin-left: 0;
+  }
+  #curiosidadeTitle{
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+  }
+  .card-image-sobre-nos img{
+    width: 150px;
+  }
+  .cards_item_sobre {
+    width: 17rem;
+    font-size: 12px;
+    margin-top: 20px;
+  }  
+  #idDev{
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 376px) {
+  #curiosidadeTitle{
+    margin-bottom: 1rem;
+  }
+}
+
+
 /*=== FIM SOBRE NÓS ===*/
 
 /*=== INÍCIO FOOTER ===*/
