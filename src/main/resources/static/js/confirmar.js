@@ -13,14 +13,14 @@ function confirmarExclusao(event) {
     text: "Essa ação é irreversível",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Sim!',
-    cancelButtonText: 'Não.',
+    confirmButtonText: 'Sim',
+    cancelButtonText: 'Não',
     reverseButtons: true
   }).then((result) => {
     if (result.isConfirmed) {
       swalWithBootstrapButtons.fire(
         'Excluído!',
-        'success'
+        'Sucesso'
       )
     } else if (
       /* Read more about handling dismissals below */
@@ -28,8 +28,8 @@ function confirmarExclusao(event) {
     ) {
       swalWithBootstrapButtons.fire(
         'Cancelado',
-        'Sua operação foi cancelada.)',
-        'error'
+        'Sua operação foi cancelada.',
+        'Erro'
       )
     }
   })

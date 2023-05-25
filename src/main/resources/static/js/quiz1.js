@@ -258,7 +258,7 @@ function fimDoJogo() {
 
     let s = 's'
     pontos == 0 ? s = '' : s = s
-    instrucoes.textContent = "Fim de Jogo! Você conseguiu " + pontos + " ponto"+ s
+    instrucoes.textContent = "Fim de Jogo! Você conseguiu." + pontos + " ponto"+ s
 
     instrucoes.classList.add('placar')
 
