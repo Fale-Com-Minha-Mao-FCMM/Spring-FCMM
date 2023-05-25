@@ -577,16 +577,24 @@ font-size: 16px;
   width: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .curiosidade{
     flex-direction: column;
   }
-
   .curiosidadeText{
     margin-right: 0;
   }
   #curiosidadeImg{
     margin-left: 42px;
+  }
+  .capitulos-details {
+    width: 14rem;
+  }
+  #capitulos{
+    flex-direction: column;
+    gap: 38px;
+    align-items: center;
+    margin-bottom: 4rem;
   }
 }
 
@@ -1428,7 +1436,7 @@ nav .sidebar-button i{
 #capitulos{
   display: flex;
   justify-content: space-evenly;
-  padding-top: 10%;
+  padding-top: 3rem;
   margin-bottom: 7rem;
 }
 
@@ -1486,7 +1494,33 @@ nav .sidebar-button i{
   margin-left: 43%;
   border-radius: 10px;
   padding: 0.4rem 6rem;
+}
 
+@media (max-width: 870px) {
+  .capitulos-details {
+    width: 14rem;
+  }
+  #capitulos{
+    flex-direction: initial;
+    gap: 38px;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 769px) {
+  .capitulos-details {
+    width: 12rem;
+  }
+
+  #capitulos{
+    gap: 24px;
+  }
+}
+
+@media (max-width: 499px) {
+  #capitulos{
+    flex-direction: column;
+  }
 }
 /*=== FIM CAPÍTULOS ===*/
 
