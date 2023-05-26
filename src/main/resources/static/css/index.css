@@ -81,7 +81,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #003087;
+  background-color: #222;
 }
 
 @keyframes entering{
@@ -850,6 +850,87 @@ cursor: pointer;
   color:black
 }
 
+@media (max-width: 700px) {
+  .Cadastro-Container{
+    width: 500px;
+  }
+}
+
+@media (max-width: 530px) {
+  .Cadastro-Container{
+    width: 430px;
+  }
+}
+@media (max-width: 455px) {
+  .Cadastro-Container{
+    width: 395px;
+  }
+
+  .Cadastro-Container .emails {
+    margin-bottom: 13px;
+    flex-direction: column;
+  }
+
+  .Cadastro-Container .senhas {
+    flex-direction: column;
+  }
+
+  .Cadastro-Container .inputEmail,.Cadastro-Container .inputSenha, .Cadastro-Container .inputConfirmaSenha  {
+    width: 190%;
+  }
+
+  .Cadastro-Container #inputConfirmaEmail {
+    width: 218%;
+}
+}
+
+@media (max-width: 400px) {
+  .Cadastro-Container{
+    width: 395px;
+  }
+}
+
+@media (max-width: 376px) {
+  .Cadastro-Container{
+    width: 330px;
+  }
+  .Cadastro-Container .nomeCompleto{
+    flex-direction: column;
+  }
+  .Cadastro-Container .inputEmail,.Cadastro-Container .inputSenha, .Cadastro-Container .inputConfirmaSenha  {
+    width: 127%;
+    margin-left: 0;
+  }
+  .Cadastro-Container #inputConfirmaEmail {
+    width: 146%;
+  }
+  .Cadastro-Container .textSobrenome{
+    margin-left: 0;
+    width: 146%;
+  }
+  .Cadastro-Container .inputSobrenome{
+    margin-left: 0;
+    width: 243px;
+  }
+  #nome {
+    margin-bottom: 13px;
+    width: 146%;
+  }
+
+  .Cadastro-Container .inputNumeroCelular {
+    width: 243px;
+  }
+
+}
+
+@media (max-width: 321px) {
+  .Cadastro-Container{
+    width: 290px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 /*=== FIM CADASTRO ====*/
 
 /*=== INÍCIO LOGIN ====*/
@@ -940,7 +1021,7 @@ cursor: pointer;
   color: #fff;
   z-index: 1;
   margin-top: 82%;
-  bottom: -6em;
+  bottom: -10em;
 }
 
 #footerLogin h3 {
@@ -978,6 +1059,18 @@ cursor: pointer;
 
 .socialsLogin a:hover i {
   color: aqua;
+}
+
+@media (max-width: 321px) {
+  #footerLogin{
+    bottom: -15em;
+  }
+}
+
+@media (max-width: 426px) {
+  #footerLogin{
+    bottom: -20em;
+  }
 }
 
 /*=== FIM FOOTER LOGIN ===*/
