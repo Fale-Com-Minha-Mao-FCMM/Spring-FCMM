@@ -64,6 +64,7 @@ public ModelAndView formLogin() {
     return mv;
 }
 
+<<<<<<< HEAD
 @PostMapping( value="/login-usuario", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 public RedirectView login(@ModelAttribute @Valid UsuarioDTO  usuario, BindingResult result){
     
@@ -104,6 +105,12 @@ public RedirectView login(@ModelAttribute @Valid UsuarioDTO  usuario, BindingRes
 public ModelAndView formCrud() {
     return new ModelAndView("crudAdminHome");
 }
+=======
+//@GetMapping("/crud")
+//public ModelAndView formCrud() {
+//    return new ModelAndView("crudAdminHome");
+//}
+>>>>>>> b4805dde0a0d78db9f08213a6d2db495dca1cde6
 
 // @GetMapping("/crudAdministradores")
 //     public ModelAndView showAdmin(){
@@ -124,6 +131,11 @@ public ModelAndView formCrud() {
 public ModelAndView homeUsuario() {
     return new ModelAndView("homeUsuario");
 }
+
+@GetMapping("/crudEstatisticas")
+    public ModelAndView CrudEstatisticas() {
+    return new ModelAndView("crudAdminEstatisticas");
+    }
 
 @GetMapping("/capitulos")
 public ModelAndView capitulos() {

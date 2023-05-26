@@ -31,10 +31,10 @@ public class GUIAdminController {
     //     return new ModelAndView("homeUsuario");
     // }
 
-    // @GetMapping("/crud")
-    // public ModelAndView formCrud() {
-    //     return new ModelAndView("crudAdminHome");
-    // }
+    @GetMapping("/crud")
+     public ModelAndView formCrud() {
+         return new ModelAndView("crudAdminHome");
+    }
 
     
 
@@ -46,10 +46,17 @@ public class GUIAdminController {
          return mv;
      }
 
+<<<<<<< HEAD
     //@GetMapping("/crudCapitulos")
     //public ModelAndView formCrudCapitulos() {
     //return new ModelAndView("crudAdminCapitulos");
     //}
+=======
+    /*@GetMapping("/crudEstatisticas")
+    public ModelAndView CrudEstatisticas() {
+    return new ModelAndView("crudAdminEstatisticas");
+    }*/
+>>>>>>> b4805dde0a0d78db9f08213a6d2db495dca1cde6
 
     //-----CRIAR USUARIO-----\\
 

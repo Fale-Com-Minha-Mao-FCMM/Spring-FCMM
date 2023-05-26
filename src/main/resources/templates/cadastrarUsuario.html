@@ -21,11 +21,11 @@
                             <div class="emails">
                                 <div>
                                     <label for="formEmail">Email* </label><br>
-                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" required><br>
+                                    <input type="email" class="inputEmail" name="inputEmail" id="inputEmail" placeholder="seuemail@email.com" th:field="*{email}" minlength="6" required><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>
-                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}"><br>
+                                    <input type="email" class="inputConfirmaEmail" name="inputConfirmaEmail" id="inputConfirmaEmail" placeholder="seuemail@email.com" th:field="*{confirmarEmail}" minlength="6" required><br>
                                 </div>
                             </div>
                         </div>
@@ -33,11 +33,11 @@
                             <div class="senhas">
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}"><br>
+                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************" th:field="*{senha}" minlength="4" required><br>
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha">Confirmar Senha* </label><br>
-                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}"><br>
+                                    <input type="password" class="inputConfirmaSenha" name="inputConfirmaSenha" placeholder="************" th:field="*{confirmarSenha}" minlength="4" required><br>
                                 </div>
                             </div>
                         </div>
@@ -47,17 +47,17 @@
                         <div class="nomeCompleto">
                             <div>
                                 <label for="formName">Nome* </label><br>
-                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}"><br>
+                                <input type="text" class="inputName" name="inputName" placeholder="Edson" th:field="*{nome}" minlength="3" required><br>
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
-                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}"><br>
+                                <input type="text" class="inputSobrenome" name="inputSobrenome" placeholder="Saraiva" th:field="*{sobrenome}" min="2" required><br>
                             </div>
                         </div>
-                        <div class="extras" >
+                        <div class="extras">
                             <div>
                                 <label for="formNumeroCelular" class="textNumeroCelular">Número de celular*</label><br>
-                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}"><br>
+                                <input type="tel" class="inputNumeroCelular" name="inputNumeroCelular" placeholder="+55 (11) 99999-9999" th:field="*{telefone}" minlength="9" maxlength="15" required><br>
                             </div>
                         </div>                 
                     </div>

@@ -38,7 +38,7 @@
                                     for="cadastro-usuario" 
                                     id="inputEmail"
                                     placeholder="seuemail@email.com" 
-                                    th:field="*{email}">
+                                    th:field="*{email}" minlength="4" required>
                                     <br>
                                 </div>
                                 <div class="alerta" th:if="${#fields.hasErrors('confirmarEmail')}">
@@ -52,7 +52,8 @@
                                     name="inputConfirmaEmail" 
                                     id="inputConfirmaEmail" 
                                     placeholder="seuemail@email.com" 
-                                    th:field="*{confirmarEmail}"><br>
+                                    th:field="*{confirmarEmail}" minlength="4" required>
+                                    <br>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +70,8 @@
                                     id="inputSenha" 
                                     name="inputSenha" 
                                     placeholder="************" 
-                                    th:field="*{senha}"><br>
+                                    th:field="*{senha}" minlength="4" required>
+                                    <br>
                                 </div>
                                 <div class="alerta" th:if="${#fields.hasErrors('confirmarSenha')}">
                                     <label class="validarMensagem" th:errors="*{confirmarSenha}"></label>
@@ -82,7 +84,8 @@
                                     id="inputConfirmaSenha" 
                                     name="inputConfirmaSenha" 
                                     placeholder="************" 
-                                    th:field="*{confirmarSenha}"><br>
+                                    th:field="*{confirmarSenha}" minlength="4" required>
+                                    <br>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +100,8 @@
                                 class="inputName" 
                                 name="inputName"
                                  placeholder="Edson" 
-                                 th:field="*{nome}"><br>
+                                 th:field="*{nome}" minlength="3" required>
+                                 <br>
                             </div>
                             <div>
                                 <label for="formSobrenome" class="textSobrenome">Sobrenome* </label><br>
@@ -106,7 +110,8 @@
                                 class="inputSobrenome" 
                                 name="inputSobrenome" 
                                 placeholder="Saraiva" 
-                                th:field="*{sobrenome}"><br>
+                                th:field="*{sobrenome}" minlength="2" required>
+                                <br>
                             </div>
                         </div>
                         <div class="extras" >
@@ -118,7 +123,8 @@
                                 id="inputNumeroCelular" 
                                 name="inputNumeroCelular" 
                                 placeholder="+55 (11) 99999-9999" 
-                                th:field="*{telefone}"><br>
+                                th:field="*{telefone}" minlength="9" maxlength="16" required>
+                                <br>
                             </div>
                         </div>                 
                     </div>

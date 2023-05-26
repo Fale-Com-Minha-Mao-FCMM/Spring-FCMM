@@ -11,7 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
      
-    <title>Capítulos</title>
+    <title>Estatísticas</title>
    </head>
 <body>
   <div class="sidebar">
@@ -38,9 +38,9 @@
           </a>
         </li>
         <li>
-          <a th:href="@{/crudCapitulos}" class="active">
-            <i class='bx bx-bookmark' ></i>
-            <span class="links_name">Capitulos</span>
+          <a th:href="@{/crudEstatisticas}" class="active">
+            <i class='bx bxs-objects-vertical-bottom'></i>
+            <span class="links_name">Estatísticas</span>
           </a>
         </li>
         <li class="log_out">
@@ -50,46 +50,5 @@
           </a>
         </li>
       </ul>
-  </div>
-  <section class="home-section">
-  <script>
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".sidebarBtn");
-      sidebarBtn.onclick = function() {
-      sidebar.classList.toggle("active");
-    if(sidebar.classList.contains("active")){
-      sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-    }else
-      sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-    }
- </script>
-    <div id="capitulos">
-      <div class="capitulos-details">
-      <img th:src="@{/img/backgrounds/bg3.jpg}">
-      <div class="capitulos-title">
-      <p> Capítulo 1 </p>
-      <a class="btn_capitulo" href="#">Revisar</a>
-    </div>
-    </div>
-    <div class="capitulos-details">
-      <img th:src="@{/img/backgrounds/bg2.jpg}">
-      <div class="capitulos-title">
-      <p> Capítulo 2 </p>
-      <a class="btn_capitulo" href="#">Revisar</a>  <!--Falta configurar o HREF do botão para visualizar o capítulo-->
-    </div>
-    </div>
-    <div class="capitulos-details">
-      <img th:src="@{/img/backgrounds/bg1.jpg}">
-      <div class="capitulos-title">
-      <p> Capítulo 3 </p>
-      <a class="btn_capitulo" href="#">Revisar</a>
-    </div>
-    </div>
-  </div>
-
-  <div class="btn_adicionar_capitulo">
-    <a href="#">Adicionar Capitulo</a>
-  </div>
-
 </body>
 </html>
