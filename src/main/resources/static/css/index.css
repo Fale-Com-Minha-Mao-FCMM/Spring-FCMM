@@ -77,11 +77,11 @@ body {
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #9e9ea0;
+  background-color: #d8d8d8;
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #222;
+  background-color: #6a99e0;
 }
 
 @keyframes entering{
@@ -436,6 +436,10 @@ font-size: 16px;
   color: #003087;
 }
 
+textarea{
+  resize: none;
+  width: 100%;
+}
 #section-fale-conosco {
   margin-top: 40px;
   padding-bottom: 40px;
@@ -497,50 +501,27 @@ font-size: 16px;
 
 @media (max-width: 768px){
   #form-fale-conosco input{
-    width: 90%;
-    margin-left: 26px;
+    width: 100%;
     padding: 4px;
     font-size: 0.8rem;
   }
-  #form-fale-conosco label {
-    margin-left: 26px;
-  }  
-  #txtcontato {
-    margin-left: 26px;
-  }
-  .btnEnviar{
-    margin-left: 26px;
-  }
+
 }
 @media (max-width: 613px){
   #form-fale-conosco input{
-    width: 85%;
-    margin-left: 57px;
-  }
-  #form-fale-conosco label {
-    margin-left: 57px;
-  }  
-  #txtcontato {
-    margin-left: 57px;
+    width: 100%;
   }
   .btnEnviar{
-    margin-left: 57px;
     padding: 7px 66px;
   }
 }
 
 @media (max-width: 585px){
   #form-fale-conosco input{
-    width: 85%;
-    margin-left: 50px;
+    width: 100%;
+    margin-left: -3px;
   }
 }
-
-@media (max-width: 613px)
-  #form-fale-conosco input {
-      width: 75%;
-      margin-left: 76px;
-  }
 
 @media (max-width:420px) {
   .contato{
