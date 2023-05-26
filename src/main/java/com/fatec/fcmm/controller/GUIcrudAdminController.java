@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fatec.fcmm.model.Admin.Admin;
+// import com.fatec.fcmm.util.PasswordUtil;
 import com.fatec.fcmm.services.MantemAdmin;
 
 import org.springframework.web.servlet.view.RedirectView;
@@ -54,6 +55,8 @@ public class GUIcrudAdminController {
 
         if (!service.save(admin).isPresent()) {
             ModelAndView mv = new ModelAndView("cadastrarAdmin");
+            // String hashSenha = PasswordUtil.encoder(admin.getSenha());
+            // admin.setSenha(hashSenha);
             mv.addObject("message", "Dados inválidos");
         }
 

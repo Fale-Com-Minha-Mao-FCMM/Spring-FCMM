@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -37,6 +38,7 @@ public class Usuario {
     private String confirmarSenha;
 
     @NotBlank (message = "Nome é requirido")
+	@Size(min=3, message = "O nome deve conter no mínimo caracteres")
     private String nome;
 
     @NotBlank (message = "Sobrenome é requirido")
@@ -48,7 +50,18 @@ public class Usuario {
 	@NotBlank (message = "Capitulo é requirido")
 	private Integer capAtual = 1;
 
+	@NotBlank (message = "IsAdmin é requirido")
+	private boolean isAdmin;
+
 	//Getters and Setters
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 
 	public long getId() {
 		return id;
@@ -133,7 +146,8 @@ public class Usuario {
 			@NotBlank(message = "Nome é requirido") String nome,
 			@NotBlank(message = "Sobrenome é requirido") String sobrenome,
 			@NotBlank(message = "Telefone é requirido") String telefone,
-			@NotBlank(message = "Capitulo é requirido") Integer capAtual){
+			@NotBlank(message = "Capitulo é requirido") Integer capAtual,
+			@NotBlank(message = "IsAdmin é requirido") boolean isAdmin){
 		this.email = email;
 		this.confirmarEmail = confirmarEmail;
 		this.senha = senha;
@@ -142,6 +156,7 @@ public class Usuario {
 		this.sobrenome = sobrenome;
 		this.telefone = telefone;
 		this.capAtual = capAtual;
+		this.isAdmin = isAdmin;
 	}
 	
 	

@@ -46,10 +46,10 @@ public class GUIAdminController {
          return mv;
      }
 
-    // @GetMapping("/crudCapitulos")
-    // public ModelAndView formCrudCapitulos() {
-    //     return new ModelAndView("crudAdminCapitulos");
-    // }
+    //@GetMapping("/crudCapitulos")
+    //public ModelAndView formCrudCapitulos() {
+    //return new ModelAndView("crudAdminCapitulos");
+    //}
 
     //-----CRIAR USUARIO-----\\
 

@@ -35,6 +35,9 @@ public class UsuarioDTO {
     @NotBlank (message = "Capitulo é requirido")
 	private Integer capAtual = 1;
 
+    @NotBlank (message = "IsAdmin é requirido")
+	private boolean isAdmin;
+
     //Construtores
     public UsuarioDTO() {}
 
@@ -46,7 +49,8 @@ public class UsuarioDTO {
             @NotBlank(message = "Nome é requirido") String nome,
             @NotBlank(message = "Sobrenome é requirido") String sobrenome,
             @NotBlank(message = "Telefone é requirido") String telefone,
-            @NotBlank(message = "Capitulo é requirido") Integer capAtual) {
+            @NotBlank(message = "Capitulo é requirido") Integer capAtual,
+            @NotBlank(message = "IsAdmin é requirido") boolean isAdmin) {
         this.email = email;
         this.confirmarEmail = confirmarEmail;
         this.senha = senha;
@@ -55,9 +59,18 @@ public class UsuarioDTO {
         this.sobrenome = sobrenome;
         this.telefone = telefone;
         this.capAtual = capAtual;
+        this.isAdmin = isAdmin;
     }
 
     //Getters e Setters
+
+    public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 
     public String getEmail() {
         return email;
@@ -124,7 +137,7 @@ public class UsuarioDTO {
 	}
 
     public Usuario retornaUmUsuario(){
-        return new Usuario(email, confirmarEmail, senha, confirmarSenha, nome, sobrenome, telefone, capAtual);
+        return new Usuario(email, confirmarEmail, senha, confirmarSenha, nome, sobrenome, telefone, capAtual, isAdmin);
     }
 
    

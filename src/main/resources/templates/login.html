@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,18 @@
             <div class="felipelindo">
              <div class="Login-Container">
                 <h1>Bem-vindo de volta!</h1>
-                <form name="formUsuario" method="POST">
+                <div th:if="${param.error}">
+                    <p><h1 style="color: red;">Ocorreu um erro no processo de login. Por favor, tente novamente.</h1></p>
+                </div>
+                <div th:if="${param.vazio}">
+                    <p><h1 style="color: red;">Não pode ter campos vazios..</h1></p>
+                </div>
+                <form 
+                action="#" 
+                th:action="@{/login-usuario}" 
+                th:object="${usuario}"  
+                name="formUsuario" 
+                method="POST">
                     <div>
                         <div>
                             <div>
@@ -27,25 +38,33 @@
                             <div>
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
-                                    <input type="password" class="inputSenha" name="inputSenha" placeholder="************"><br>
+                                    <input 
+                                    type="password" 
+                                    class="inputSenha" 
+                                    name="inputSenha" 
+                                    placeholder="************" 
+                                   ><br>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                   
-                    
-                    <div>
                         <div>
-                            <a class="inputSubmitEntrar" th:href="@{/crud}">Entrar</a>
+                            <input 
+                            type="submit"
+                            value="Login" 
+                            id= "Cadastrar" 
+                            class="inputSubmitCadastrar">
+                        </div>
+                    </div>
+                    <div>    
+                        <h4> Não possui conta? </h4>
+                        <p>
+                        <a th:href="@{/criar-usuario}" class="btnCadastro">Cadastrar</a>
+                        </p>
+                    </div>
                 </form>
             </div>
             <br>
-            <center><div>    
-                <h4> Não possui conta? </h4>
-                <p>
-                <a th:href="@{/criar-usuario}" class="btnCadastro">Cadastrar</a>
-                </p>
-            </div>
+            
             </div>    
             </div>
 </body>

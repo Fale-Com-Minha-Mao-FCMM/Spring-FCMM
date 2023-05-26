@@ -26,6 +26,9 @@
                         <h2>Detalhes da Conta</h2>
                         <div>
                             <div class="emails">
+                                <div class="alerta" th:if="${#fields.hasErrors('nome')}">
+                                    <label class="validarMensagem" th:errors="*{nome}"></label>
+                                </div>
                                 <div>
                                     <label for="formEmail">Email* </label><br>
                                     <input 
@@ -37,6 +40,9 @@
                                     placeholder="seuemail@email.com" 
                                     th:field="*{email}">
                                     <br>
+                                </div>
+                                <div class="alerta" th:if="${#fields.hasErrors('confirmarEmail')}">
+                                    <label class="validarMensagem" th:errors="*{confirmarEmail}"></label>
                                 </div>
                                 <div>
                                     <label for="formConfirmaEmail">Confirmar email* </label><br>
@@ -52,6 +58,9 @@
                         </div>
                         <div>
                             <div class="senhas">
+                                <div class="alerta" th:if="${#fields.hasErrors('senha')}">
+                                    <label class="validarMensagem" th:errors="*{senha}"></label>
+                                </div>
                                 <div>
                                     <label for="formSenha">Senha* </label><br>
                                     <input 
@@ -61,6 +70,9 @@
                                     name="inputSenha" 
                                     placeholder="************" 
                                     th:field="*{senha}"><br>
+                                </div>
+                                <div class="alerta" th:if="${#fields.hasErrors('confirmarSenha')}">
+                                    <label class="validarMensagem" th:errors="*{confirmarSenha}"></label>
                                 </div>
                                 <div>
                                     <label for="formConfirmaSenha">Confirmar Senha* </label><br>

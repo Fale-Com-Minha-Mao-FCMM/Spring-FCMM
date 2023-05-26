@@ -9,7 +9,7 @@ function confirmarExclusao(event) {
   })
 
   swalWithBootstrapButtons.fire({
-    title: 'Você term certeza que deseja excluir?',
+    title: 'Você tem certeza que deseja excluir?',
     text: "Essa ação é irreversível",
     icon: 'warning',
     showCancelButton: true,

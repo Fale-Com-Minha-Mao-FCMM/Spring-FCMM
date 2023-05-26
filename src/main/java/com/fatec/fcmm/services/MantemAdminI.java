@@ -51,7 +51,7 @@ public class MantemAdminI  implements MantemAdmin{
     @Override
     public Optional<Admin> atualiza (Long id, Admin admin) {
         logger.info(">>>>>> 1.servico atualiza informações do usuario chamado");
-        Admin adminModificado = new Admin(admin.getEmail(),  admin.getSenha(), admin.getNome(), admin.getSobrenome());
+        Admin adminModificado = new Admin(admin.getEmail(),  admin.getSenha(), admin.getNome(), admin.getSobrenome(), false);
         adminModificado.setId(id);
         logger.info(adminModificado.getId());
         return Optional.ofNullable(repository.save(adminModificado));

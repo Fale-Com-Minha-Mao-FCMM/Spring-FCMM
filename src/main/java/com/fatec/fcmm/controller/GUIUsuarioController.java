@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fatec.fcmm.model.Usuario.Usuario;
+
 import com.fatec.fcmm.services.MantemUsuario;
 
 import ch.qos.logback.core.model.Model;
@@ -49,6 +50,7 @@ public class GUIUsuarioController {
     public RedirectView createUsuario(@Valid Usuario usuario, BindingResult result){
         if (result.hasErrors()){
             return new RedirectView ("/criar-usuario");
+            
         }
 
         if (!service.save(usuario).isPresent()){

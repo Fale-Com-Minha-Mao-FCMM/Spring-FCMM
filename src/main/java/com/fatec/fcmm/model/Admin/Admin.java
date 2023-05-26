@@ -36,21 +36,33 @@ public class Admin {
     @NotBlank (message = "Sobrenome é requirido")
     private String sobrenome;
 
+    @NotBlank (message = "isAdmin é requirido")
+    private boolean isAdmin = true;
 
     //Método construtores
     public Admin() {}
 
     public Admin(@NotBlank(message = "Email é requirido") String email,
             @NotBlank(message = "Senha é requirida") String senha, @NotBlank(message = "Nome é requirido") String nome,
-            @NotBlank(message = "Sobrenome é requirido") String sobrenome) {
+            @NotBlank(message = "Sobrenome é requirido") String sobrenome,
+            @NotBlank(message = "isAdmin é requirido")boolean isAdmin) {
         this.email = email;
         this.senha = senha;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.isAdmin = isAdmin;
     }
 
 
     //Getter e Setters
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
 
     public long getId() {
         return id;

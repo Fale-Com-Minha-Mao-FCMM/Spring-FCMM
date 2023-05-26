@@ -37,9 +37,9 @@ public class MantemUsuarioI implements MantemUsuario {
     }
 
     @Override
-    public Optional<Usuario> consultaPorNome(String Nome) {
+    public Optional<Usuario> consultaPorNome(String nome) {
         logger.info(">>>>>> servico consultaPorNome chamado");
-        return repository.findByNome(Nome);
+        return repository.findByNome(nome);
     }
 
 
@@ -50,9 +50,33 @@ public class MantemUsuarioI implements MantemUsuario {
     }
 
     @Override
+    public Optional<Usuario> findByEmail (String email) {
+        logger.info (">>>>> Servico findByEmail chamado.");
+        return repository.findByEmail(email);
+    }
+
+    @Override
+    public Optional <Usuario> findBySenha (String senha) {
+        logger.info(">>>>>> Servico findBySenha chamado");
+        return repository.findBySenha(senha);
+    }
+
+    @Override
+    public Optional <Usuario> findByCapAtual (Integer capAtual){
+        logger.info (">>>>>> servico findByCapAtual chamado");
+        return repository.findByCapAtual(capAtual);
+    }
+
+    @Override
+    public Optional <Usuario> findByIsAdmin (boolean isAdmin){
+        logger.info (">>>>>> servico findbyCapAtual ");
+        return repository.findByIsAdmin(isAdmin);
+    }
+
+    @Override
     public Optional<Usuario> atualiza (Long id, Usuario usuario) {
         logger.info(">>>>>> 1.servico atualiza informações do usuario chamado");
-        Usuario usuarioModificado = new Usuario(usuario.getEmail(), usuario.getConfirmarEmail(), usuario.getSenha(), usuario.getConfirmarSenha(), usuario.getNome(), usuario.getSobrenome(), usuario.getTelefone(), usuario.getCapAtual());
+        Usuario usuarioModificado = new Usuario(usuario.getEmail(), usuario.getConfirmarEmail(), usuario.getSenha(), usuario.getConfirmarSenha(), usuario.getNome(), usuario.getSobrenome(), usuario.getTelefone(), usuario.getCapAtual(), false);
         usuarioModificado.setId(id);
         logger.info(usuarioModificado.getId());
         return Optional.ofNullable(repository.save(usuarioModificado));

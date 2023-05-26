@@ -23,20 +23,34 @@ public class AdminDTO {
     @NotBlank (message = "Sobrenome é requirido")
     private String sobrenome;
 
+    @NotBlank (message = "isAdmin é requirido")
+    private boolean isAdmin = true;
+
     //Construtores
     public AdminDTO() {}
     
     public AdminDTO(@NotBlank(message = "Email é requirido") String email,
     @NotBlank(message = "A senha é requirida") String senha,
     @NotBlank(message = "Nome é requirido") String nome,
-    @NotBlank(message = "Sobrenome é requirido") String sobrenome) {
+    @NotBlank(message = "Sobrenome é requirido") String sobrenome,
+    @NotBlank(message = "isAdmin é requirido")boolean isAdmin) {
         this.email = email;
         this.senha = senha;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.isAdmin = isAdmin;
     }
 
     //Getters e Setters
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -70,7 +84,7 @@ public class AdminDTO {
     }
 
     public Admin retornaUmAdmin(){
-        return new Admin(email, senha, nome, sobrenome);
+        return new Admin(email, senha, nome, sobrenome, isAdmin);
     }
 
 }

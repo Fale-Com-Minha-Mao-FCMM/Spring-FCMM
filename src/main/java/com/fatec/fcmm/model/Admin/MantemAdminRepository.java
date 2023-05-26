@@ -10,5 +10,7 @@ import com.fatec.fcmm.model.Usuario.Usuario;
 @Repository
 public interface MantemAdminRepository extends JpaRepository <Admin, Long> {
     Optional<Admin> findByNome(String nome);
+    Optional<Usuario> findByEmail(String email);
+    Optional<Usuario> findBySenha(String senha);
     List<Admin> findAllByNomeIgnoreCaseContaining(String nome);       
 }
