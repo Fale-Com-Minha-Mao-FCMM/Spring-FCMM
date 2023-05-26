@@ -212,7 +212,6 @@ body {
   color: #FFF;
 }
 
-
 #nav-header {
   display: flex;
   justify-content: space-around;
@@ -247,21 +246,17 @@ body {
  .nav-list ul li:hover > ul{
   display: inherit;
  }
-
  .nav-list ul ul li{
   width: 50px;
   float: none;
   display: list-item;
   position: relative;
  }
-
  .nav-list ul ul ul li{
   position: relative;
   top: -60px;
   left: 200px;
  }
-
- 
 .nav-list li ul {
   letter-spacing: 3px;
   margin-left: 32px;
@@ -485,6 +480,10 @@ font-size: 16px;
   width: 7rem;
 }
 
+#txtcontato {
+  word-wrap: break-word;
+}
+
 @media (max-width: 768px) {
   
   .contato{
@@ -495,6 +494,53 @@ font-size: 16px;
     margin-top: 0;
   }
 }
+
+@media (max-width: 768px){
+  #form-fale-conosco input{
+    width: 90%;
+    margin-left: 26px;
+    padding: 4px;
+    font-size: 0.8rem;
+  }
+  #form-fale-conosco label {
+    margin-left: 26px;
+  }  
+  #txtcontato {
+    margin-left: 26px;
+  }
+  .btnEnviar{
+    margin-left: 26px;
+  }
+}
+@media (max-width: 613px){
+  #form-fale-conosco input{
+    width: 85%;
+    margin-left: 57px;
+  }
+  #form-fale-conosco label {
+    margin-left: 57px;
+  }  
+  #txtcontato {
+    margin-left: 57px;
+  }
+  .btnEnviar{
+    margin-left: 57px;
+    padding: 7px 66px;
+  }
+}
+
+@media (max-width: 585px){
+  #form-fale-conosco input{
+    width: 85%;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 613px)
+  #form-fale-conosco input {
+      width: 75%;
+      margin-left: 76px;
+  }
 
 @media (max-width:420px) {
   .contato{
